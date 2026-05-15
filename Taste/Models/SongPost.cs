@@ -17,4 +17,6 @@ public partial class SongPost : ObservableObject
 
     // כאן אפשר להוסיף את הניקוד של ה-Trendsetter שדיברנו עליו
     public int PopularityScore { get; set; }
+    public string UserUploadedImageUrl { get; set; } // התמונה הגדולה שהמשתמש צילם/העלה
+    public string PreviewUrl { get; set; } // לינק ל-30 שניות השמעה מספוטיפיי
 }

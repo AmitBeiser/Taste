@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Taste")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+56d2a444c8494cada6f362f3adc9ba181a715845")]
 [assembly: System.Reflection.AssemblyProductAttribute("Taste")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Taste")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

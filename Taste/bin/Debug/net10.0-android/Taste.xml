@@ -4,11 +4,88 @@
         <name>Taste</name>
     </assembly>
     <members>
+        <member name="T:Taste.Models.SongPost">
+            <inheritdoc/>
+        </member>
+        <member name="P:Taste.Models.SongPost.IsLocked">
+            <inheritdoc cref="F:Taste.Models.SongPost._isLocked"/>
+        </member>
+        <member name="T:Taste.ViewModels.BaseViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:Taste.ViewModels.BaseViewModel.Title">
+            <inheritdoc cref="F:Taste.ViewModels.BaseViewModel._title"/>
+        </member>
+        <member name="P:Taste.ViewModels.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:Taste.ViewModels.BaseViewModel._isBusy"/>
+        </member>
+        <member name="T:Taste.ViewModels.MainViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Taste.ViewModels.MainViewModel.CurrentSongUrl">
+            <inheritdoc cref="F:Taste.ViewModels.MainViewModel._currentSongUrl"/>
+        </member>
+        <member name="F:Taste.ViewModels.MainViewModel.playSongCommand">
+            <summary>The backing field for <see cref="P:Taste.ViewModels.MainViewModel.PlaySongCommand"/>.</summary>
+        </member>
+        <member name="P:Taste.ViewModels.MainViewModel.PlaySongCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:Taste.ViewModels.MainViewModel.PlaySong(Taste.Models.SongPost)"/>.</summary>
+        </member>
+        <member name="F:Taste.ViewModels.MainViewModel.likeStoryCommand">
+            <summary>The backing field for <see cref="P:Taste.ViewModels.MainViewModel.LikeStoryCommand"/>.</summary>
+        </member>
+        <member name="P:Taste.ViewModels.MainViewModel.LikeStoryCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:Taste.ViewModels.MainViewModel.LikeStory(Taste.Models.SongPost)"/>.</summary>
+        </member>
         <member name="T:Taste.Resource">
             <summary>
             Android Resource Designer class.
             Exposes the Android Resource designer assembly into the project Namespace.
             </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLocked">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLocked" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsNotBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsNotBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentSongUrl">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentSongUrl" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLocked">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLocked" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsNotBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsNotBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentSongUrl">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentSongUrl" generated properties.</summary>
         </member>
     </members>
 </doc>

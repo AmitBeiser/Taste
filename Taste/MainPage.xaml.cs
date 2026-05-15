@@ -1,23 +1,28 @@
-﻿namespace Taste;
+﻿using Taste.ViewModels;
+namespace Taste;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+    public MainPage()
+    {
+        InitializeComponent();
+		MusicPlayer.MediaFailed += (s, e) => 
+    {
+        System.Diagnostics.Debug.WriteLine($"MEDIA ERROR: {e.ErrorMessage}");
+    };
 
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+    // נרשם לשינויי מצב (Playing, Buffering, Paused)
+    MusicPlayer.StateChanged += (s, e) =>
+    {
+        System.Diagnostics.Debug.WriteLine($"MEDIA STATE: {e.NewState}");
+    };
 
-	private void OnCounterClicked(object? sender, EventArgs e)
-	{
-		count++;
+        // אנחנו משתמשים ב-AudioManager.Current כדי לשלוח ל-ViewModel את הנגן שהוא צריך
+        BindingContext = new MainViewModel();
+    }
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+    }
 }

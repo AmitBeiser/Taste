@@ -1,10 +1,10 @@
-<api type="debug" assembly-name="Taste" mvid="011466e5d3e9453e9fa10957aaa27666">
+<api type="debug" assembly-name="Taste" mvid="96549ea0f953476896e3782d9ecc33b1">
   <java-to-managed>
-    <entry java-name="crc64faefbcec196edad9/MainActivity" managed-name="Taste.MainActivity, Taste" managed-type-token-id="33554442" />
-    <entry java-name="crc64faefbcec196edad9/MainApplication" managed-name="Taste.MainApplication, Taste" managed-type-token-id="33554443" />
+    <entry java-name="crc64faefbcec196edad9/MainActivity" managed-name="Taste.MainActivity, Taste" managed-type-token-id="33554444" />
+    <entry java-name="crc64faefbcec196edad9/MainApplication" managed-name="Taste.MainApplication, Taste" managed-type-token-id="33554445" />
   </java-to-managed>
   <managed-to-java>
-    <entry java-name="crc64faefbcec196edad9/MainActivity" managed-name="Taste.MainActivity, Taste" managed-type-token-id="33554442" />
-    <entry java-name="crc64faefbcec196edad9/MainApplication" managed-name="Taste.MainApplication, Taste" managed-type-token-id="33554443" />
+    <entry java-name="crc64faefbcec196edad9/MainActivity" managed-name="Taste.MainActivity, Taste" managed-type-token-id="33554444" />
+    <entry java-name="crc64faefbcec196edad9/MainApplication" managed-name="Taste.MainApplication, Taste" managed-type-token-id="33554445" />
   </managed-to-java>
 </api>

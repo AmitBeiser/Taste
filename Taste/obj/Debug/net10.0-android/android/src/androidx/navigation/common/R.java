@@ -8,26 +8,26 @@ package androidx.navigation.common;
 
 public final class R {
 	public static final class attr {
-		public static final int action = 0x7f030002;
-		public static final int argType = 0x7f03003e;
-		public static final int destination = 0x7f030184;
-		public static final int enterAnim = 0x7f0301bf;
-		public static final int exitAnim = 0x7f0301ca;
-		public static final int launchSingleTop = 0x7f03028f;
-		public static final int mimeType = 0x7f030337;
-		public static final int nullable = 0x7f03037c;
-		public static final int popEnterAnim = 0x7f0303a8;
-		public static final int popExitAnim = 0x7f0303a9;
-		public static final int popUpTo = 0x7f0303aa;
-		public static final int popUpToInclusive = 0x7f0303ab;
-		public static final int popUpToSaveState = 0x7f0303ac;
-		public static final int restoreState = 0x7f0303ce;
-		public static final int route = 0x7f0303d4;
-		public static final int startDestination = 0x7f030420;
-		public static final int uri = 0x7f030502;
+		public static final int action = 0x7f040002;
+		public static final int argType = 0x7f040041;
+		public static final int destination = 0x7f04018e;
+		public static final int enterAnim = 0x7f0401c9;
+		public static final int exitAnim = 0x7f0401d4;
+		public static final int launchSingleTop = 0x7f0402a0;
+		public static final int mimeType = 0x7f040348;
+		public static final int nullable = 0x7f04038e;
+		public static final int popEnterAnim = 0x7f0403bf;
+		public static final int popExitAnim = 0x7f0403c0;
+		public static final int popUpTo = 0x7f0403c1;
+		public static final int popUpToInclusive = 0x7f0403c2;
+		public static final int popUpToSaveState = 0x7f0403c3;
+		public static final int restoreState = 0x7f0403eb;
+		public static final int route = 0x7f0403f2;
+		public static final int startDestination = 0x7f04044f;
+		public static final int uri = 0x7f040538;
 	}
 	public static final class styleable {
-		public static final int[] NavAction = new int[] { 0x010100d0, 0x7f030184, 0x7f0301bf, 0x7f0301ca, 0x7f03028f, 0x7f0303a8, 0x7f0303a9, 0x7f0303aa, 0x7f0303ab, 0x7f0303ac, 0x7f0303ce };
+		public static final int[] NavAction = new int[] { 0x010100d0, 0x7f04018e, 0x7f0401c9, 0x7f0401d4, 0x7f0402a0, 0x7f0403bf, 0x7f0403c0, 0x7f0403c1, 0x7f0403c2, 0x7f0403c3, 0x7f0403eb };
 		public static final int NavAction_android_id = 0;
 		public static final int NavAction_destination = 1;
 		public static final int NavAction_enterAnim = 2;
@@ -39,19 +39,19 @@ public final class R {
 		public static final int NavAction_popUpToInclusive = 8;
 		public static final int NavAction_popUpToSaveState = 9;
 		public static final int NavAction_restoreState = 10;
-		public static final int[] NavArgument = new int[] { 0x01010003, 0x010101ed, 0x7f03003e, 0x7f03037c };
+		public static final int[] NavArgument = new int[] { 0x01010003, 0x010101ed, 0x7f040041, 0x7f04038e };
 		public static final int NavArgument_android_defaultValue = 1;
 		public static final int NavArgument_android_name = 0;
 		public static final int NavArgument_argType = 2;
 		public static final int NavArgument_nullable = 3;
-		public static final int[] NavDeepLink = new int[] { 0x010104ee, 0x7f030002, 0x7f030337, 0x7f030502 };
+		public static final int[] NavDeepLink = new int[] { 0x010104ee, 0x7f040002, 0x7f040348, 0x7f040538 };
 		public static final int NavDeepLink_action = 1;
 		public static final int NavDeepLink_android_autoVerify = 0;
 		public static final int NavDeepLink_mimeType = 2;
 		public static final int NavDeepLink_uri = 3;
-		public static final int[] NavGraphNavigator = new int[] { 0x7f030420 };
+		public static final int[] NavGraphNavigator = new int[] { 0x7f04044f };
 		public static final int NavGraphNavigator_startDestination = 0;
-		public static final int[] Navigator = new int[] { 0x01010001, 0x010100d0, 0x7f0303d4 };
+		public static final int[] Navigator = new int[] { 0x01010001, 0x010100d0, 0x7f0403f2 };
 		public static final int Navigator_android_id = 1;
 		public static final int Navigator_android_label = 0;
 		public static final int Navigator_route = 2;

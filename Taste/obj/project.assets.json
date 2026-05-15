@@ -2,6 +2,29 @@
   "version": 3,
   "targets": {
     "net10.0-android36.0": {
+      "CommunityToolkit.Maui.MediaElement/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "10.0.41",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer.Dash": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer.Hls": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer.Rtsp": "1.8.0",
+          "Xamarin.AndroidX.Media3.Session": "1.8.0",
+          "Xamarin.AndroidX.Media3.UI": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.4.2": {
         "type": "package",
         "compile": {
@@ -267,34 +290,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.41",
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41",
+          "Microsoft.Maui.Resizetizer": "10.0.41"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41"
         },
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20",
+          "Microsoft.Maui.Core": "10.0.41",
           "Xamarin.AndroidX.DynamicAnimation": "1.1.0.3"
         },
         "compile": {
@@ -412,12 +435,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-android36.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -430,7 +453,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -438,8 +461,8 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20",
+          "Microsoft.Maui.Essentials": "10.0.41",
+          "Microsoft.Maui.Graphics": "10.0.41",
           "Xamarin.Android.Glide": "4.16.0.14",
           "Xamarin.AndroidX.Lifecycle.LiveData": "2.9.2.1",
           "Xamarin.AndroidX.Navigation.Common": "2.9.2.1",
@@ -464,10 +487,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20",
+          "Microsoft.Maui.Graphics": "10.0.41",
           "Xamarin.AndroidX.Activity": "1.10.1.3",
           "Xamarin.AndroidX.Browser": "1.8.0.11",
           "Xamarin.AndroidX.Security.SecurityCrypto": "1.1.0.4-alpha07",
@@ -484,7 +507,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.41": {
         "type": "package",
         "compile": {
           "lib/net10.0-android36.0/Microsoft.Maui.Graphics.dll": {
@@ -497,7 +520,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.41": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -1683,6 +1706,284 @@
           "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Loader.targets": {}
         }
       },
+      "Xamarin.AndroidX.Media/1.7.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Collection": "1.5.0.3",
+          "Xamarin.AndroidX.Core": "1.16.0.3"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Common/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.5.1.1",
+          "Xamarin.Google.Guava": "33.4.8.3"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Common.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Container/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Container.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Container.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Container.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Database/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Database.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Database.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Database.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.DataSource/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.ExifInterface": "1.4.1.1",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.Database": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.DataSource.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.DataSource.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.DataSource.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Decoder/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Decoder.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Decoder.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Decoder.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Collection": "1.5.0.3",
+          "Xamarin.AndroidX.Core": "1.16.0.3",
+          "Xamarin.AndroidX.ExifInterface": "1.4.1.1",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.Container": "1.8.0",
+          "Xamarin.AndroidX.Media3.DataSource": "1.8.0",
+          "Xamarin.AndroidX.Media3.Database": "1.8.0",
+          "Xamarin.AndroidX.Media3.Decoder": "1.8.0",
+          "Xamarin.AndroidX.Media3.Extractor": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer.Dash/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer.Hls/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer.Rtsp/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Extractor/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.Container": "1.8.0",
+          "Xamarin.AndroidX.Media3.Decoder": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Extractor.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Extractor.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Extractor.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Session/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.5.0.3",
+          "Xamarin.AndroidX.Core": "1.16.0.3",
+          "Xamarin.AndroidX.Media": "1.7.0.12",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.DataSource": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Session.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Session.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Session.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Ui/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.RecyclerView": "1.4.0.3"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Ui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Ui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Ui.targets": {}
+        }
+      },
       "Xamarin.AndroidX.Navigation.Common/2.9.2.1": {
         "type": "package",
         "dependencies": {
@@ -2393,17 +2694,62 @@
           }
         }
       },
-      "Xamarin.Google.Guava.ListenableFuture/1.0.0.29": {
+      "Xamarin.Google.Guava/33.4.8.3": {
         "type": "package",
+        "dependencies": {
+          "Xamarin.Google.ErrorProne.Annotations": "2.41.0.1",
+          "Xamarin.Google.Guava.FailureAccess": "1.0.3.3",
+          "Xamarin.Google.Guava.ListenableFuture": "9999.0.0",
+          "Xamarin.Google.J2Objc.Annotations": "3.0.0.11",
+          "Xamarin.JSpecify": "1.0.0.4"
+        },
         "compile": {
-          "lib/net10.0-android36.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.dll": {
             "related": ".aar;.pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net10.0-android36.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "Xamarin.Google.Guava.FailureAccess/1.0.3.3": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.FailureAccess.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.FailureAccess.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
+      "Xamarin.Google.Guava.ListenableFuture/9999.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Xamarin.Google.J2Objc.Annotations/3.0.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0-android35.0/_._": {}
+        },
+        "runtime": {
+          "lib/net10.0-android35.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.Google.J2Objc.Annotations.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/26.0.2.3": {
@@ -2532,6 +2878,29 @@
       }
     },
     "net10.0-android36.0/android-arm64": {
+      "CommunityToolkit.Maui.MediaElement/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "10.0.41",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer.Dash": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer.Hls": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer.Rtsp": "1.8.0",
+          "Xamarin.AndroidX.Media3.Session": "1.8.0",
+          "Xamarin.AndroidX.Media3.UI": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.4.2": {
         "type": "package",
         "compile": {
@@ -2797,34 +3166,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.41",
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41",
+          "Microsoft.Maui.Resizetizer": "10.0.41"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41"
         },
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20",
+          "Microsoft.Maui.Core": "10.0.41",
           "Xamarin.AndroidX.DynamicAnimation": "1.1.0.3"
         },
         "compile": {
@@ -2942,12 +3311,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-android36.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -2960,7 +3329,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -2968,8 +3337,8 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20",
+          "Microsoft.Maui.Essentials": "10.0.41",
+          "Microsoft.Maui.Graphics": "10.0.41",
           "Xamarin.Android.Glide": "4.16.0.14",
           "Xamarin.AndroidX.Lifecycle.LiveData": "2.9.2.1",
           "Xamarin.AndroidX.Navigation.Common": "2.9.2.1",
@@ -2994,10 +3363,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20",
+          "Microsoft.Maui.Graphics": "10.0.41",
           "Xamarin.AndroidX.Activity": "1.10.1.3",
           "Xamarin.AndroidX.Browser": "1.8.0.11",
           "Xamarin.AndroidX.Security.SecurityCrypto": "1.1.0.4-alpha07",
@@ -3014,7 +3383,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.41": {
         "type": "package",
         "compile": {
           "lib/net10.0-android36.0/Microsoft.Maui.Graphics.dll": {
@@ -3027,7 +3396,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.41": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -4213,6 +4582,284 @@
           "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Loader.targets": {}
         }
       },
+      "Xamarin.AndroidX.Media/1.7.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Collection": "1.5.0.3",
+          "Xamarin.AndroidX.Core": "1.16.0.3"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Common/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.5.1.1",
+          "Xamarin.Google.Guava": "33.4.8.3"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Common.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Container/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Container.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Container.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Container.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Database/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Database.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Database.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Database.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.DataSource/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.ExifInterface": "1.4.1.1",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.Database": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.DataSource.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.DataSource.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.DataSource.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Decoder/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Decoder.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Decoder.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Decoder.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Collection": "1.5.0.3",
+          "Xamarin.AndroidX.Core": "1.16.0.3",
+          "Xamarin.AndroidX.ExifInterface": "1.4.1.1",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.Container": "1.8.0",
+          "Xamarin.AndroidX.Media3.DataSource": "1.8.0",
+          "Xamarin.AndroidX.Media3.Database": "1.8.0",
+          "Xamarin.AndroidX.Media3.Decoder": "1.8.0",
+          "Xamarin.AndroidX.Media3.Extractor": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer.Dash/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer.Hls/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer.Rtsp/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Extractor/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.Container": "1.8.0",
+          "Xamarin.AndroidX.Media3.Decoder": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Extractor.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Extractor.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Extractor.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Session/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.5.0.3",
+          "Xamarin.AndroidX.Core": "1.16.0.3",
+          "Xamarin.AndroidX.Media": "1.7.0.12",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.DataSource": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Session.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Session.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Session.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Ui/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.RecyclerView": "1.4.0.3"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Ui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Ui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Ui.targets": {}
+        }
+      },
       "Xamarin.AndroidX.Navigation.Common/2.9.2.1": {
         "type": "package",
         "dependencies": {
@@ -4923,17 +5570,62 @@
           }
         }
       },
-      "Xamarin.Google.Guava.ListenableFuture/1.0.0.29": {
+      "Xamarin.Google.Guava/33.4.8.3": {
         "type": "package",
+        "dependencies": {
+          "Xamarin.Google.ErrorProne.Annotations": "2.41.0.1",
+          "Xamarin.Google.Guava.FailureAccess": "1.0.3.3",
+          "Xamarin.Google.Guava.ListenableFuture": "9999.0.0",
+          "Xamarin.Google.J2Objc.Annotations": "3.0.0.11",
+          "Xamarin.JSpecify": "1.0.0.4"
+        },
         "compile": {
-          "lib/net10.0-android36.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.dll": {
             "related": ".aar;.pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net10.0-android36.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "Xamarin.Google.Guava.FailureAccess/1.0.3.3": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.FailureAccess.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.FailureAccess.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
+      "Xamarin.Google.Guava.ListenableFuture/9999.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Xamarin.Google.J2Objc.Annotations/3.0.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0-android35.0/_._": {}
+        },
+        "runtime": {
+          "lib/net10.0-android35.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.Google.J2Objc.Annotations.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/26.0.2.3": {
@@ -5062,6 +5754,29 @@
       }
     },
     "net10.0-android36.0/android-x64": {
+      "CommunityToolkit.Maui.MediaElement/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "10.0.41",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer.Dash": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer.Hls": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer.Rtsp": "1.8.0",
+          "Xamarin.AndroidX.Media3.Session": "1.8.0",
+          "Xamarin.AndroidX.Media3.UI": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.4.2": {
         "type": "package",
         "compile": {
@@ -5327,34 +6042,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.41",
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41",
+          "Microsoft.Maui.Resizetizer": "10.0.41"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41"
         },
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20",
+          "Microsoft.Maui.Core": "10.0.41",
           "Xamarin.AndroidX.DynamicAnimation": "1.1.0.3"
         },
         "compile": {
@@ -5472,12 +6187,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-android36.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -5490,7 +6205,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -5498,8 +6213,8 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20",
+          "Microsoft.Maui.Essentials": "10.0.41",
+          "Microsoft.Maui.Graphics": "10.0.41",
           "Xamarin.Android.Glide": "4.16.0.14",
           "Xamarin.AndroidX.Lifecycle.LiveData": "2.9.2.1",
           "Xamarin.AndroidX.Navigation.Common": "2.9.2.1",
@@ -5524,10 +6239,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20",
+          "Microsoft.Maui.Graphics": "10.0.41",
           "Xamarin.AndroidX.Activity": "1.10.1.3",
           "Xamarin.AndroidX.Browser": "1.8.0.11",
           "Xamarin.AndroidX.Security.SecurityCrypto": "1.1.0.4-alpha07",
@@ -5544,7 +6259,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.41": {
         "type": "package",
         "compile": {
           "lib/net10.0-android36.0/Microsoft.Maui.Graphics.dll": {
@@ -5557,7 +6272,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.41": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -6743,6 +7458,284 @@
           "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Loader.targets": {}
         }
       },
+      "Xamarin.AndroidX.Media/1.7.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Collection": "1.5.0.3",
+          "Xamarin.AndroidX.Core": "1.16.0.3"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Common/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.5.1.1",
+          "Xamarin.Google.Guava": "33.4.8.3"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Common.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Container/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Container.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Container.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Container.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Database/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Database.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Database.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Database.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.DataSource/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.ExifInterface": "1.4.1.1",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.Database": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.DataSource.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.DataSource.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.DataSource.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Decoder/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Decoder.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Decoder.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Decoder.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Collection": "1.5.0.3",
+          "Xamarin.AndroidX.Core": "1.16.0.3",
+          "Xamarin.AndroidX.ExifInterface": "1.4.1.1",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.Container": "1.8.0",
+          "Xamarin.AndroidX.Media3.DataSource": "1.8.0",
+          "Xamarin.AndroidX.Media3.Database": "1.8.0",
+          "Xamarin.AndroidX.Media3.Decoder": "1.8.0",
+          "Xamarin.AndroidX.Media3.Extractor": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer.Dash/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer.Hls/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer.Rtsp/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Extractor/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.Container": "1.8.0",
+          "Xamarin.AndroidX.Media3.Decoder": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Extractor.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Extractor.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Extractor.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Session/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.5.0.3",
+          "Xamarin.AndroidX.Core": "1.16.0.3",
+          "Xamarin.AndroidX.Media": "1.7.0.12",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.DataSource": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Session.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Session.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Session.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Ui/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.RecyclerView": "1.4.0.3"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Ui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Ui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Ui.targets": {}
+        }
+      },
       "Xamarin.AndroidX.Navigation.Common/2.9.2.1": {
         "type": "package",
         "dependencies": {
@@ -7453,17 +8446,62 @@
           }
         }
       },
-      "Xamarin.Google.Guava.ListenableFuture/1.0.0.29": {
+      "Xamarin.Google.Guava/33.4.8.3": {
         "type": "package",
+        "dependencies": {
+          "Xamarin.Google.ErrorProne.Annotations": "2.41.0.1",
+          "Xamarin.Google.Guava.FailureAccess": "1.0.3.3",
+          "Xamarin.Google.Guava.ListenableFuture": "9999.0.0",
+          "Xamarin.Google.J2Objc.Annotations": "3.0.0.11",
+          "Xamarin.JSpecify": "1.0.0.4"
+        },
         "compile": {
-          "lib/net10.0-android36.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.dll": {
             "related": ".aar;.pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net10.0-android36.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "Xamarin.Google.Guava.FailureAccess/1.0.3.3": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.FailureAccess.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.FailureAccess.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
+      "Xamarin.Google.Guava.ListenableFuture/9999.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Xamarin.Google.J2Objc.Annotations/3.0.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0-android35.0/_._": {}
+        },
+        "runtime": {
+          "lib/net10.0-android35.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.Google.J2Objc.Annotations.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/26.0.2.3": {
@@ -7592,6 +8630,29 @@
       }
     },
     "net10.0-android36.0/iossimulator-arm64": {
+      "CommunityToolkit.Maui.MediaElement/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "10.0.41",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer.Dash": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer.Hls": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer.Rtsp": "1.8.0",
+          "Xamarin.AndroidX.Media3.Session": "1.8.0",
+          "Xamarin.AndroidX.Media3.UI": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.4.2": {
         "type": "package",
         "compile": {
@@ -7857,34 +8918,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.41",
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41",
+          "Microsoft.Maui.Resizetizer": "10.0.41"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41"
         },
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20",
+          "Microsoft.Maui.Core": "10.0.41",
           "Xamarin.AndroidX.DynamicAnimation": "1.1.0.3"
         },
         "compile": {
@@ -8002,12 +9063,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-android36.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -8020,7 +9081,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -8028,8 +9089,8 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20",
+          "Microsoft.Maui.Essentials": "10.0.41",
+          "Microsoft.Maui.Graphics": "10.0.41",
           "Xamarin.Android.Glide": "4.16.0.14",
           "Xamarin.AndroidX.Lifecycle.LiveData": "2.9.2.1",
           "Xamarin.AndroidX.Navigation.Common": "2.9.2.1",
@@ -8054,10 +9115,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20",
+          "Microsoft.Maui.Graphics": "10.0.41",
           "Xamarin.AndroidX.Activity": "1.10.1.3",
           "Xamarin.AndroidX.Browser": "1.8.0.11",
           "Xamarin.AndroidX.Security.SecurityCrypto": "1.1.0.4-alpha07",
@@ -8074,7 +9135,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.41": {
         "type": "package",
         "compile": {
           "lib/net10.0-android36.0/Microsoft.Maui.Graphics.dll": {
@@ -8087,7 +9148,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.41": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -9273,6 +10334,284 @@
           "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Loader.targets": {}
         }
       },
+      "Xamarin.AndroidX.Media/1.7.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Collection": "1.5.0.3",
+          "Xamarin.AndroidX.Core": "1.16.0.3"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Common/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.5.1.1",
+          "Xamarin.Google.Guava": "33.4.8.3"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Common.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Container/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Container.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Container.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Container.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Database/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Database.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Database.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Database.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.DataSource/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.ExifInterface": "1.4.1.1",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.Database": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.DataSource.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.DataSource.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.DataSource.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Decoder/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Decoder.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Decoder.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Decoder.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Collection": "1.5.0.3",
+          "Xamarin.AndroidX.Core": "1.16.0.3",
+          "Xamarin.AndroidX.ExifInterface": "1.4.1.1",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.Container": "1.8.0",
+          "Xamarin.AndroidX.Media3.DataSource": "1.8.0",
+          "Xamarin.AndroidX.Media3.Database": "1.8.0",
+          "Xamarin.AndroidX.Media3.Decoder": "1.8.0",
+          "Xamarin.AndroidX.Media3.Extractor": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer.Dash/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer.Hls/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer.Rtsp/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Extractor/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.Container": "1.8.0",
+          "Xamarin.AndroidX.Media3.Decoder": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Extractor.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Extractor.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Extractor.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Session/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.5.0.3",
+          "Xamarin.AndroidX.Core": "1.16.0.3",
+          "Xamarin.AndroidX.Media": "1.7.0.12",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.DataSource": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Session.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Session.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Session.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Ui/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.RecyclerView": "1.4.0.3"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Ui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Ui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Ui.targets": {}
+        }
+      },
       "Xamarin.AndroidX.Navigation.Common/2.9.2.1": {
         "type": "package",
         "dependencies": {
@@ -9983,17 +11322,62 @@
           }
         }
       },
-      "Xamarin.Google.Guava.ListenableFuture/1.0.0.29": {
+      "Xamarin.Google.Guava/33.4.8.3": {
         "type": "package",
+        "dependencies": {
+          "Xamarin.Google.ErrorProne.Annotations": "2.41.0.1",
+          "Xamarin.Google.Guava.FailureAccess": "1.0.3.3",
+          "Xamarin.Google.Guava.ListenableFuture": "9999.0.0",
+          "Xamarin.Google.J2Objc.Annotations": "3.0.0.11",
+          "Xamarin.JSpecify": "1.0.0.4"
+        },
         "compile": {
-          "lib/net10.0-android36.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.dll": {
             "related": ".aar;.pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net10.0-android36.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "Xamarin.Google.Guava.FailureAccess/1.0.3.3": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.FailureAccess.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.FailureAccess.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
+      "Xamarin.Google.Guava.ListenableFuture/9999.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Xamarin.Google.J2Objc.Annotations/3.0.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0-android35.0/_._": {}
+        },
+        "runtime": {
+          "lib/net10.0-android35.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.Google.J2Objc.Annotations.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/26.0.2.3": {
@@ -10122,6 +11506,29 @@
       }
     },
     "net10.0-android36.0/maccatalyst-arm64": {
+      "CommunityToolkit.Maui.MediaElement/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "10.0.41",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer.Dash": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer.Hls": "1.8.0",
+          "Xamarin.AndroidX.Media3.ExoPlayer.Rtsp": "1.8.0",
+          "Xamarin.AndroidX.Media3.Session": "1.8.0",
+          "Xamarin.AndroidX.Media3.UI": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.4.2": {
         "type": "package",
         "compile": {
@@ -10387,34 +11794,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.41",
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41",
+          "Microsoft.Maui.Resizetizer": "10.0.41"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41"
         },
         "build": {
           "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/netstandard2.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20",
+          "Microsoft.Maui.Core": "10.0.41",
           "Xamarin.AndroidX.DynamicAnimation": "1.1.0.3"
         },
         "compile": {
@@ -10532,12 +11939,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-android36.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -10550,7 +11957,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -10558,8 +11965,8 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20",
+          "Microsoft.Maui.Essentials": "10.0.41",
+          "Microsoft.Maui.Graphics": "10.0.41",
           "Xamarin.Android.Glide": "4.16.0.14",
           "Xamarin.AndroidX.Lifecycle.LiveData": "2.9.2.1",
           "Xamarin.AndroidX.Navigation.Common": "2.9.2.1",
@@ -10584,10 +11991,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20",
+          "Microsoft.Maui.Graphics": "10.0.41",
           "Xamarin.AndroidX.Activity": "1.10.1.3",
           "Xamarin.AndroidX.Browser": "1.8.0.11",
           "Xamarin.AndroidX.Security.SecurityCrypto": "1.1.0.4-alpha07",
@@ -10604,7 +12011,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.41": {
         "type": "package",
         "compile": {
           "lib/net10.0-android36.0/Microsoft.Maui.Graphics.dll": {
@@ -10617,7 +12024,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.41": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -11803,6 +13210,284 @@
           "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Loader.targets": {}
         }
       },
+      "Xamarin.AndroidX.Media/1.7.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Collection": "1.5.0.3",
+          "Xamarin.AndroidX.Core": "1.16.0.3"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Common/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Annotation.Experimental": "1.5.1.1",
+          "Xamarin.Google.Guava": "33.4.8.3"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Common.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Container/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Container.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Container.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Container.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Database/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Database.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Database.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Database.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.DataSource/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.ExifInterface": "1.4.1.1",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.Database": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.DataSource.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.DataSource.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.DataSource.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Decoder/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Decoder.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Decoder.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Decoder.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Collection": "1.5.0.3",
+          "Xamarin.AndroidX.Core": "1.16.0.3",
+          "Xamarin.AndroidX.ExifInterface": "1.4.1.1",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.Container": "1.8.0",
+          "Xamarin.AndroidX.Media3.DataSource": "1.8.0",
+          "Xamarin.AndroidX.Media3.Database": "1.8.0",
+          "Xamarin.AndroidX.Media3.Decoder": "1.8.0",
+          "Xamarin.AndroidX.Media3.Extractor": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer.Dash/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer.Hls/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.ExoPlayer.Rtsp/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.ExoPlayer": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Extractor/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.Container": "1.8.0",
+          "Xamarin.AndroidX.Media3.Decoder": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Extractor.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Extractor.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Extractor.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Session/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Collection": "1.5.0.3",
+          "Xamarin.AndroidX.Core": "1.16.0.3",
+          "Xamarin.AndroidX.Media": "1.7.0.12",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.Media3.DataSource": "1.8.0"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Session.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Session.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Session.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.Media3.Ui/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.9.1.5",
+          "Xamarin.AndroidX.Media3.Common": "1.8.0",
+          "Xamarin.AndroidX.RecyclerView": "1.4.0.3"
+        },
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Ui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Ui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Ui.targets": {}
+        }
+      },
       "Xamarin.AndroidX.Navigation.Common/2.9.2.1": {
         "type": "package",
         "dependencies": {
@@ -12513,17 +14198,62 @@
           }
         }
       },
-      "Xamarin.Google.Guava.ListenableFuture/1.0.0.29": {
+      "Xamarin.Google.Guava/33.4.8.3": {
         "type": "package",
+        "dependencies": {
+          "Xamarin.Google.ErrorProne.Annotations": "2.41.0.1",
+          "Xamarin.Google.Guava.FailureAccess": "1.0.3.3",
+          "Xamarin.Google.Guava.ListenableFuture": "9999.0.0",
+          "Xamarin.Google.J2Objc.Annotations": "3.0.0.11",
+          "Xamarin.JSpecify": "1.0.0.4"
+        },
         "compile": {
-          "lib/net10.0-android36.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.dll": {
             "related": ".aar;.pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net10.0-android36.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.dll": {
             "related": ".aar;.pdb;.xml"
           }
+        }
+      },
+      "Xamarin.Google.Guava.FailureAccess/1.0.3.3": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.FailureAccess.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-android36.0/Xamarin.Google.Guava.FailureAccess.dll": {
+            "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
+      "Xamarin.Google.Guava.ListenableFuture/9999.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Xamarin.Google.J2Objc.Annotations/3.0.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0-android35.0/_._": {}
+        },
+        "runtime": {
+          "lib/net10.0-android35.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net10.0-android35.0/Xamarin.Google.J2Objc.Annotations.targets": {}
         }
       },
       "Xamarin.Jetbrains.Annotations/26.0.2.3": {
@@ -12652,6 +14382,22 @@
       }
     },
     "net10.0-ios26.2": {
+      "CommunityToolkit.Maui.MediaElement/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "10.0.41"
+        },
+        "compile": {
+          "lib/net10.0-ios26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-ios26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.4.2": {
         "type": "package",
         "compile": {
@@ -12901,34 +14647,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.41",
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41",
+          "Microsoft.Maui.Resizetizer": "10.0.41"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41"
         },
         "build": {
           "buildTransitive/net6.0-ios10.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/net6.0-ios10.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Controls.dll": {
@@ -13045,12 +14791,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -13063,7 +14809,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -13071,17 +14817,17 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Essentials": "10.0.41",
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "runtime": {
           "lib/net10.0-ios26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "build": {
@@ -13089,10 +14835,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Essentials.dll": {
@@ -13105,7 +14851,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.41": {
         "type": "package",
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Graphics.dll": {
@@ -13118,7 +14864,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.41": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -13162,6 +14908,22 @@
       }
     },
     "net10.0-ios26.2/android-arm64": {
+      "CommunityToolkit.Maui.MediaElement/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "10.0.41"
+        },
+        "compile": {
+          "lib/net10.0-ios26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-ios26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.4.2": {
         "type": "package",
         "compile": {
@@ -13411,34 +15173,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.41",
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41",
+          "Microsoft.Maui.Resizetizer": "10.0.41"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41"
         },
         "build": {
           "buildTransitive/net6.0-ios10.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/net6.0-ios10.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Controls.dll": {
@@ -13555,12 +15317,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -13573,7 +15335,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -13581,17 +15343,17 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Essentials": "10.0.41",
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "runtime": {
           "lib/net10.0-ios26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "build": {
@@ -13599,10 +15361,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Essentials.dll": {
@@ -13615,7 +15377,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.41": {
         "type": "package",
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Graphics.dll": {
@@ -13628,7 +15390,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.41": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -13672,6 +15434,22 @@
       }
     },
     "net10.0-ios26.2/android-x64": {
+      "CommunityToolkit.Maui.MediaElement/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "10.0.41"
+        },
+        "compile": {
+          "lib/net10.0-ios26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-ios26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.4.2": {
         "type": "package",
         "compile": {
@@ -13921,34 +15699,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.41",
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41",
+          "Microsoft.Maui.Resizetizer": "10.0.41"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41"
         },
         "build": {
           "buildTransitive/net6.0-ios10.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/net6.0-ios10.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Controls.dll": {
@@ -14065,12 +15843,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -14083,7 +15861,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -14091,17 +15869,17 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Essentials": "10.0.41",
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "runtime": {
           "lib/net10.0-ios26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "build": {
@@ -14109,10 +15887,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Essentials.dll": {
@@ -14125,7 +15903,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.41": {
         "type": "package",
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Graphics.dll": {
@@ -14138,7 +15916,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.41": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -14182,6 +15960,22 @@
       }
     },
     "net10.0-ios26.2/iossimulator-arm64": {
+      "CommunityToolkit.Maui.MediaElement/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "10.0.41"
+        },
+        "compile": {
+          "lib/net10.0-ios26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-ios26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.4.2": {
         "type": "package",
         "compile": {
@@ -14431,34 +16225,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.41",
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41",
+          "Microsoft.Maui.Resizetizer": "10.0.41"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41"
         },
         "build": {
           "buildTransitive/net6.0-ios10.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/net6.0-ios10.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Controls.dll": {
@@ -14575,12 +16369,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -14593,7 +16387,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -14601,17 +16395,17 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Essentials": "10.0.41",
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "runtime": {
           "lib/net10.0-ios26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "build": {
@@ -14619,10 +16413,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Essentials.dll": {
@@ -14635,7 +16429,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.41": {
         "type": "package",
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Graphics.dll": {
@@ -14648,7 +16442,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.41": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -14692,6 +16486,22 @@
       }
     },
     "net10.0-ios26.2/maccatalyst-arm64": {
+      "CommunityToolkit.Maui.MediaElement/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "10.0.41"
+        },
+        "compile": {
+          "lib/net10.0-ios26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-ios26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.4.2": {
         "type": "package",
         "compile": {
@@ -14941,34 +16751,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.41",
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41",
+          "Microsoft.Maui.Resizetizer": "10.0.41"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41"
         },
         "build": {
           "buildTransitive/net6.0-ios10.0/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/net6.0-ios10.0/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Controls.dll": {
@@ -15085,12 +16895,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -15103,7 +16913,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -15111,17 +16921,17 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Essentials": "10.0.41",
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "runtime": {
           "lib/net10.0-ios26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "build": {
@@ -15129,10 +16939,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Essentials.dll": {
@@ -15145,7 +16955,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.41": {
         "type": "package",
         "compile": {
           "lib/net10.0-ios26.0/Microsoft.Maui.Graphics.dll": {
@@ -15158,7 +16968,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.41": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -15202,6 +17012,22 @@
       }
     },
     "net10.0-maccatalyst26.2": {
+      "CommunityToolkit.Maui.MediaElement/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "10.0.41"
+        },
+        "compile": {
+          "lib/net10.0-maccatalyst26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-maccatalyst26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.4.2": {
         "type": "package",
         "compile": {
@@ -15451,34 +17277,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.41",
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41",
+          "Microsoft.Maui.Resizetizer": "10.0.41"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41"
         },
         "build": {
           "buildTransitive/net6.0-maccatalyst13.1/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/net6.0-maccatalyst13.1/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Controls.dll": {
@@ -15595,12 +17421,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -15613,7 +17439,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -15621,17 +17447,17 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Essentials": "10.0.41",
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "runtime": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "build": {
@@ -15639,10 +17465,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Essentials.dll": {
@@ -15655,7 +17481,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.41": {
         "type": "package",
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Graphics.dll": {
@@ -15668,7 +17494,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.41": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -15712,6 +17538,22 @@
       }
     },
     "net10.0-maccatalyst26.2/android-arm64": {
+      "CommunityToolkit.Maui.MediaElement/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "10.0.41"
+        },
+        "compile": {
+          "lib/net10.0-maccatalyst26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-maccatalyst26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.4.2": {
         "type": "package",
         "compile": {
@@ -15961,34 +17803,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.41",
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41",
+          "Microsoft.Maui.Resizetizer": "10.0.41"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41"
         },
         "build": {
           "buildTransitive/net6.0-maccatalyst13.1/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/net6.0-maccatalyst13.1/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Controls.dll": {
@@ -16105,12 +17947,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -16123,7 +17965,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -16131,17 +17973,17 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Essentials": "10.0.41",
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "runtime": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "build": {
@@ -16149,10 +17991,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Essentials.dll": {
@@ -16165,7 +18007,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.41": {
         "type": "package",
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Graphics.dll": {
@@ -16178,7 +18020,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.41": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -16222,6 +18064,22 @@
       }
     },
     "net10.0-maccatalyst26.2/android-x64": {
+      "CommunityToolkit.Maui.MediaElement/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "10.0.41"
+        },
+        "compile": {
+          "lib/net10.0-maccatalyst26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-maccatalyst26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.4.2": {
         "type": "package",
         "compile": {
@@ -16471,34 +18329,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.41",
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41",
+          "Microsoft.Maui.Resizetizer": "10.0.41"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41"
         },
         "build": {
           "buildTransitive/net6.0-maccatalyst13.1/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/net6.0-maccatalyst13.1/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Controls.dll": {
@@ -16615,12 +18473,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -16633,7 +18491,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -16641,17 +18499,17 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Essentials": "10.0.41",
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "runtime": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "build": {
@@ -16659,10 +18517,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Essentials.dll": {
@@ -16675,7 +18533,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.41": {
         "type": "package",
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Graphics.dll": {
@@ -16688,7 +18546,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.41": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -16732,6 +18590,22 @@
       }
     },
     "net10.0-maccatalyst26.2/iossimulator-arm64": {
+      "CommunityToolkit.Maui.MediaElement/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "10.0.41"
+        },
+        "compile": {
+          "lib/net10.0-maccatalyst26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-maccatalyst26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.4.2": {
         "type": "package",
         "compile": {
@@ -16981,34 +18855,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.41",
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41",
+          "Microsoft.Maui.Resizetizer": "10.0.41"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41"
         },
         "build": {
           "buildTransitive/net6.0-maccatalyst13.1/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/net6.0-maccatalyst13.1/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Controls.dll": {
@@ -17125,12 +18999,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -17143,7 +19017,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -17151,17 +19025,17 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Essentials": "10.0.41",
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "runtime": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "build": {
@@ -17169,10 +19043,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Essentials.dll": {
@@ -17185,7 +19059,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.41": {
         "type": "package",
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Graphics.dll": {
@@ -17198,7 +19072,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.41": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -17242,6 +19116,22 @@
       }
     },
     "net10.0-maccatalyst26.2/maccatalyst-arm64": {
+      "CommunityToolkit.Maui.MediaElement/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Maui.Controls": "10.0.41"
+        },
+        "compile": {
+          "lib/net10.0-maccatalyst26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0-maccatalyst26.0/CommunityToolkit.Maui.MediaElement.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.4.2": {
         "type": "package",
         "compile": {
@@ -17491,34 +19381,34 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Maui.Controls/10.0.20": {
+      "Microsoft.Maui.Controls/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Build.Tasks": "10.0.20",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20",
-          "Microsoft.Maui.Resizetizer": "10.0.20"
+          "Microsoft.Maui.Controls.Build.Tasks": "10.0.41",
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41",
+          "Microsoft.Maui.Resizetizer": "10.0.41"
         }
       },
-      "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
+      "Microsoft.Maui.Controls.Build.Tasks/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Controls.Xaml": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Controls.Xaml": "10.0.41"
         },
         "build": {
           "buildTransitive/net6.0-maccatalyst13.1/Microsoft.Maui.Controls.Build.Tasks.props": {},
           "buildTransitive/net6.0-maccatalyst13.1/Microsoft.Maui.Controls.Build.Tasks.targets": {}
         }
       },
-      "Microsoft.Maui.Controls.Core/10.0.20": {
+      "Microsoft.Maui.Controls.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Controls.dll": {
@@ -17635,12 +19525,12 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.Xaml/10.0.20": {
+      "Microsoft.Maui.Controls.Xaml/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
-          "Microsoft.Maui.Controls.Core": "10.0.20",
-          "Microsoft.Maui.Core": "10.0.20"
+          "Microsoft.Maui.Controls.Core": "10.0.41",
+          "Microsoft.Maui.Core": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Controls.Xaml.dll": {
@@ -17653,7 +19543,7 @@
           }
         }
       },
-      "Microsoft.Maui.Core/10.0.20": {
+      "Microsoft.Maui.Core/10.0.41": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "10.0.0",
@@ -17661,17 +19551,17 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "Microsoft.Maui.Essentials": "10.0.20",
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Essentials": "10.0.41",
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "runtime": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.dll": {
-            "related": ".pdb;.xml"
+            "related": ".pdb;.resources.zip;.xml"
           }
         },
         "build": {
@@ -17679,10 +19569,10 @@
           "buildTransitive/Microsoft.Maui.Core.targets": {}
         }
       },
-      "Microsoft.Maui.Essentials/10.0.20": {
+      "Microsoft.Maui.Essentials/10.0.41": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Maui.Graphics": "10.0.20"
+          "Microsoft.Maui.Graphics": "10.0.41"
         },
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Essentials.dll": {
@@ -17695,7 +19585,7 @@
           }
         }
       },
-      "Microsoft.Maui.Graphics/10.0.20": {
+      "Microsoft.Maui.Graphics/10.0.41": {
         "type": "package",
         "compile": {
           "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Graphics.dll": {
@@ -17708,7 +19598,7 @@
           }
         }
       },
-      "Microsoft.Maui.Resizetizer/10.0.20": {
+      "Microsoft.Maui.Resizetizer/10.0.41": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.Maui.Resizetizer.props": {},
@@ -17753,6 +19643,34 @@
     }
   },
   "libraries": {
+    "CommunityToolkit.Maui.MediaElement/9.0.0": {
+      "sha512": "pz8EDOVfbHHfc39607uOGCDXxUj9xbkbACdcuO5X5X1kY5OK1p94IG74As+VuFYReENQCIl1KTIVQkaucZ387Q==",
+      "type": "package",
+      "path": "communitytoolkit.maui.mediaelement/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ReadMe.txt",
+        "analyzers/dotnet/cs/CommunityToolkit.Maui.MediaElement.Analyzers.CodeFixes.dll",
+        "analyzers/dotnet/cs/CommunityToolkit.Maui.MediaElement.Analyzers.dll",
+        "analyzers/dotnet/cs/CommunityToolkit.Maui.MediaElement.SourceGenerators.dll",
+        "communitytoolkit.maui.mediaelement.9.0.0.nupkg.sha512",
+        "communitytoolkit.maui.mediaelement.nuspec",
+        "icon.png",
+        "lib/net10.0-android36.0/CommunityToolkit.Maui.MediaElement.aar",
+        "lib/net10.0-android36.0/CommunityToolkit.Maui.MediaElement.dll",
+        "lib/net10.0-android36.0/CommunityToolkit.Maui.MediaElement.xml",
+        "lib/net10.0-ios26.0/CommunityToolkit.Maui.MediaElement.dll",
+        "lib/net10.0-ios26.0/CommunityToolkit.Maui.MediaElement.xml",
+        "lib/net10.0-maccatalyst26.0/CommunityToolkit.Maui.MediaElement.dll",
+        "lib/net10.0-maccatalyst26.0/CommunityToolkit.Maui.MediaElement.xml",
+        "lib/net10.0-windows10.0.19041/CommunityToolkit.Maui.MediaElement.dll",
+        "lib/net10.0-windows10.0.19041/CommunityToolkit.Maui.MediaElement.pri",
+        "lib/net10.0-windows10.0.19041/CommunityToolkit.Maui.MediaElement.xml",
+        "lib/net10.0/CommunityToolkit.Maui.MediaElement.dll",
+        "lib/net10.0/CommunityToolkit.Maui.MediaElement.xml"
+      ]
+    },
     "CommunityToolkit.Mvvm/8.4.2": {
       "sha512": "WadCzGEc2U+3e20avRLng4qNtt4zoOGWrdUISqJWrHe3/FSnrYjuM5Sb4yQb09LhkBXrrI4Zt3dLKgRMbItsrg==",
       "type": "package",
@@ -18231,10 +20149,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Maui.Controls/10.0.20": {
-      "sha512": "c/Tsp1TGBQNkqpKd/aNkTnFV0FOtjyMyV04Naigg/7MphJwdc0ZI0Dw2P0TvC+tm//Ut+SnviTqlDow6V4tSmA==",
+    "Microsoft.Maui.Controls/10.0.41": {
+      "sha512": "3ALZN7Gw4uYGH4X3M+FbPGtYG2+qAJaBybJnjHday7NEKg+BaeXuJMdRzne/6O2OHg6VNOS14zY982vEMZTy3Q==",
       "type": "package",
-      "path": "microsoft.maui.controls/10.0.20",
+      "path": "microsoft.maui.controls/10.0.41",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -18242,14 +20160,14 @@
         "LICENSE.TXT",
         "README.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "microsoft.maui.controls.10.0.20.nupkg.sha512",
+        "microsoft.maui.controls.10.0.41.nupkg.sha512",
         "microsoft.maui.controls.nuspec"
       ]
     },
-    "Microsoft.Maui.Controls.Build.Tasks/10.0.20": {
-      "sha512": "8DbAwGgvgf3QPV1WCu6CabRDTZjtq7kd11sELwYhZ2ZFCdHtGTeLyvpMgnbAtMUwix4hnGyWH8fZKQJlVDBuYA==",
+    "Microsoft.Maui.Controls.Build.Tasks/10.0.41": {
+      "sha512": "fCM6TAJV/KGwi/PiPplrrvKARi/Q3FFgj99Yolp3YodIM6Av4uHvd2lYfhCTluuZYULirLCjO/XaAXpboO3anA==",
       "type": "package",
-      "path": "microsoft.maui.controls.build.tasks/10.0.20",
+      "path": "microsoft.maui.controls.build.tasks/10.0.41",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -18331,14 +20249,14 @@
         "buildTransitive/netstandard2.0/zh-HK/Microsoft.Maui.Controls.Build.Tasks.resources.dll",
         "buildTransitive/netstandard2.0/zh-Hans/Microsoft.Maui.Controls.Build.Tasks.resources.dll",
         "buildTransitive/netstandard2.0/zh-Hant/Microsoft.Maui.Controls.Build.Tasks.resources.dll",
-        "microsoft.maui.controls.build.tasks.10.0.20.nupkg.sha512",
+        "microsoft.maui.controls.build.tasks.10.0.41.nupkg.sha512",
         "microsoft.maui.controls.build.tasks.nuspec"
       ]
     },
-    "Microsoft.Maui.Controls.Core/10.0.20": {
-      "sha512": "Go8C7a0QaGiQ2EBMsxbbm52DI5+HipgT7C9AslfyfkCU8/H6gicLsPUxae5r9TyrZbgsw5KUnnPEUPJlUwtBcw==",
+    "Microsoft.Maui.Controls.Core/10.0.41": {
+      "sha512": "H1h2Fj0SUzr42UQNnYeZGmit/CbDVcFKCCHc9SVQl0OIhJpnlsVlBQNrI7wSgIEvd1+B6O/TyqF3zf7/C1HRRQ==",
       "type": "package",
-      "path": "microsoft.maui.controls.core/10.0.20",
+      "path": "microsoft.maui.controls.core/10.0.41",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -18661,14 +20579,14 @@
         "lib/netstandard2.1/zh-HK/Microsoft.Maui.Controls.resources.dll",
         "lib/netstandard2.1/zh-Hans/Microsoft.Maui.Controls.resources.dll",
         "lib/netstandard2.1/zh-Hant/Microsoft.Maui.Controls.resources.dll",
-        "microsoft.maui.controls.core.10.0.20.nupkg.sha512",
+        "microsoft.maui.controls.core.10.0.41.nupkg.sha512",
         "microsoft.maui.controls.core.nuspec"
       ]
     },
-    "Microsoft.Maui.Controls.Xaml/10.0.20": {
-      "sha512": "Ih2rMfJ5B8HbFeNgwsOi31Ngo1A31Zixl8lEuJME+7mXE8VFwVcZcfeKljKG0XTULWxe4/ALZ/nL5tTMMjIFnw==",
+    "Microsoft.Maui.Controls.Xaml/10.0.41": {
+      "sha512": "YA5yYuasgjSaRfWjpKEsnnCi59vTqjsLtzeffXmHOZ12XxgHiIbrBnZFjCmFo6LLTwIvvkOQeBNVQFtB8/w5bw==",
       "type": "package",
-      "path": "microsoft.maui.controls.xaml/10.0.20",
+      "path": "microsoft.maui.controls.xaml/10.0.41",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -18695,11 +20613,13 @@
         "lib/net10.0-windows10.0.19041/Design/Microsoft.Maui.Controls.Xaml.DesignTools.pdb",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Controls.Xaml.dll",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Controls.Xaml.pdb",
+        "lib/net10.0-windows10.0.19041/Microsoft.Maui.Controls.Xaml.pri",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Controls.Xaml.xml",
         "lib/net10.0-windows10.0.20348/Design/Microsoft.Maui.Controls.Xaml.DesignTools.dll",
         "lib/net10.0-windows10.0.20348/Design/Microsoft.Maui.Controls.Xaml.DesignTools.pdb",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Controls.Xaml.dll",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Controls.Xaml.pdb",
+        "lib/net10.0-windows10.0.20348/Microsoft.Maui.Controls.Xaml.pri",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Controls.Xaml.xml",
         "lib/net10.0/Design/Microsoft.Maui.Controls.Xaml.DesignTools.dll",
         "lib/net10.0/Design/Microsoft.Maui.Controls.Xaml.DesignTools.pdb",
@@ -18716,14 +20636,14 @@
         "lib/netstandard2.1/Microsoft.Maui.Controls.Xaml.dll",
         "lib/netstandard2.1/Microsoft.Maui.Controls.Xaml.pdb",
         "lib/netstandard2.1/Microsoft.Maui.Controls.Xaml.xml",
-        "microsoft.maui.controls.xaml.10.0.20.nupkg.sha512",
+        "microsoft.maui.controls.xaml.10.0.41.nupkg.sha512",
         "microsoft.maui.controls.xaml.nuspec"
       ]
     },
-    "Microsoft.Maui.Core/10.0.20": {
-      "sha512": "xbrQSNTMJzwpR80ga7eWVTU544NJUJM6zXdmfx1LenuizoFc8oejr1nJ1zRgISTQ0ZuQEs6flF72DyF/YemP8w==",
+    "Microsoft.Maui.Core/10.0.41": {
+      "sha512": "0vVM0v2HtjJNWTl0L1uZpnbodTSlPk83zfLyhGEr1w6u4T1W9LjFqDWUaH6zL+bj2jTr48QtP/0XKhULmu3dhA==",
       "type": "package",
-      "path": "microsoft.maui.core/10.0.20",
+      "path": "microsoft.maui.core/10.0.41",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -18746,9 +20666,11 @@
         "lib/net10.0-android36.0/maui.aar",
         "lib/net10.0-ios26.0/Microsoft.Maui.dll",
         "lib/net10.0-ios26.0/Microsoft.Maui.pdb",
+        "lib/net10.0-ios26.0/Microsoft.Maui.resources.zip",
         "lib/net10.0-ios26.0/Microsoft.Maui.xml",
         "lib/net10.0-maccatalyst26.0/Microsoft.Maui.dll",
         "lib/net10.0-maccatalyst26.0/Microsoft.Maui.pdb",
+        "lib/net10.0-maccatalyst26.0/Microsoft.Maui.resources.zip",
         "lib/net10.0-maccatalyst26.0/Microsoft.Maui.xml",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.dll",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.pdb",
@@ -18767,14 +20689,14 @@
         "lib/netstandard2.1/Microsoft.Maui.dll",
         "lib/netstandard2.1/Microsoft.Maui.pdb",
         "lib/netstandard2.1/Microsoft.Maui.xml",
-        "microsoft.maui.core.10.0.20.nupkg.sha512",
+        "microsoft.maui.core.10.0.41.nupkg.sha512",
         "microsoft.maui.core.nuspec"
       ]
     },
-    "Microsoft.Maui.Essentials/10.0.20": {
-      "sha512": "jalsUhCCL+T5qng/OXAkJhSaV/Uhml3s4LLExx/RBVz4z/kSIOjyXLkV/O66BBUxy/0nPFILeNx9p21TVqWrMg==",
+    "Microsoft.Maui.Essentials/10.0.41": {
+      "sha512": "WWuRE6Kh1ad5EgaitpN8DkLa4dcKmAm5npc6/rrYq4R+VG1uNn04AePR9TcfbZ5M5Zl13TKUrvn8OE9VIqcPXw==",
       "type": "package",
-      "path": "microsoft.maui.essentials/10.0.20",
+      "path": "microsoft.maui.essentials/10.0.41",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -18794,9 +20716,11 @@
         "lib/net10.0-maccatalyst26.0/Microsoft.Maui.Essentials.xml",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Essentials.dll",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Essentials.pdb",
+        "lib/net10.0-windows10.0.19041/Microsoft.Maui.Essentials.pri",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Essentials.xml",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Essentials.dll",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Essentials.pdb",
+        "lib/net10.0-windows10.0.20348/Microsoft.Maui.Essentials.pri",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Essentials.xml",
         "lib/net10.0/Microsoft.Maui.Essentials.dll",
         "lib/net10.0/Microsoft.Maui.Essentials.pdb",
@@ -18807,14 +20731,14 @@
         "lib/netstandard2.1/Microsoft.Maui.Essentials.dll",
         "lib/netstandard2.1/Microsoft.Maui.Essentials.pdb",
         "lib/netstandard2.1/Microsoft.Maui.Essentials.xml",
-        "microsoft.maui.essentials.10.0.20.nupkg.sha512",
+        "microsoft.maui.essentials.10.0.41.nupkg.sha512",
         "microsoft.maui.essentials.nuspec"
       ]
     },
-    "Microsoft.Maui.Graphics/10.0.20": {
-      "sha512": "X1IfBjN/0KcrcbaDU47xNrZufQeI/PJyBVPxt+3a/yNDhduGS+jlihi4sByil7E4VbQTFVPxclevnbhLtWxNQw==",
+    "Microsoft.Maui.Graphics/10.0.41": {
+      "sha512": "26r9rB7CKSnNNbDjOhfjmaeyeezeBnkp58BWWDe9hR3mflsNoJ+2VVuWt9vcx86ewgS3PvT6LqjvGgkAb4qfHg==",
       "type": "package",
-      "path": "microsoft.maui.graphics/10.0.20",
+      "path": "microsoft.maui.graphics/10.0.41",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -18836,9 +20760,11 @@
         "lib/net10.0-macos26.0/Microsoft.Maui.Graphics.xml",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Graphics.dll",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Graphics.pdb",
+        "lib/net10.0-windows10.0.19041/Microsoft.Maui.Graphics.pri",
         "lib/net10.0-windows10.0.19041/Microsoft.Maui.Graphics.xml",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Graphics.dll",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Graphics.pdb",
+        "lib/net10.0-windows10.0.20348/Microsoft.Maui.Graphics.pri",
         "lib/net10.0-windows10.0.20348/Microsoft.Maui.Graphics.xml",
         "lib/net10.0/Microsoft.Maui.Graphics.dll",
         "lib/net10.0/Microsoft.Maui.Graphics.pdb",
@@ -18849,14 +20775,14 @@
         "lib/netstandard2.1/Microsoft.Maui.Graphics.dll",
         "lib/netstandard2.1/Microsoft.Maui.Graphics.pdb",
         "lib/netstandard2.1/Microsoft.Maui.Graphics.xml",
-        "microsoft.maui.graphics.10.0.20.nupkg.sha512",
+        "microsoft.maui.graphics.10.0.41.nupkg.sha512",
         "microsoft.maui.graphics.nuspec"
       ]
     },
-    "Microsoft.Maui.Resizetizer/10.0.20": {
-      "sha512": "6MVR9wsKgfN25AuEL/KzDLd5x8TpuBrC0DRvlUq2Ddi0WdO1q0B9VsTePJF8mdDmdLybo4h/F5F59kfOTPzIXA==",
+    "Microsoft.Maui.Resizetizer/10.0.41": {
+      "sha512": "BQ14gRnWh+6Y7i2RqvpEoUNo7LyfNe/ID1b2lfrJrhfe/KS9Ws41EleHxjKYjIFScOGIFE4l3SGSuxpO3xxyXg==",
       "type": "package",
-      "path": "microsoft.maui.resizetizer/10.0.20",
+      "path": "microsoft.maui.resizetizer/10.0.41",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -18905,7 +20831,7 @@
         "buildTransitive/x64/libSkiaSharp.so",
         "buildTransitive/x86/libHarfBuzzSharp.dll",
         "buildTransitive/x86/libSkiaSharp.dll",
-        "microsoft.maui.resizetizer.10.0.20.nupkg.sha512",
+        "microsoft.maui.resizetizer.10.0.41.nupkg.sha512",
         "microsoft.maui.resizetizer.nuspec"
       ]
     },
@@ -20372,6 +22298,350 @@
         "xamarin.androidx.loader.nuspec"
       ]
     },
+    "Xamarin.AndroidX.Media/1.7.0.12": {
+      "sha512": "WVXe08JFDfLkKt2aPQEANIYV0LF08X2zlAefUx5h0GAU1mwpYo8RLjL0+7ku2CZlk/1gHW6t6VW8Vtvh/4eC1A==",
+      "type": "package",
+      "path": "xamarin.androidx.media/1.7.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "aar/androidx.media.media.aar",
+        "build/net10.0-android35.0/Xamarin.AndroidX.Media.targets",
+        "build/net8.0-android34.0/Xamarin.AndroidX.Media.targets",
+        "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Media.targets",
+        "icon.png",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media.dll",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media.pdb",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media.xml",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media.dll",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media.pdb",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media.xml",
+        "proguard/proguard.txt",
+        "readme.md",
+        "xamarin.androidx.media.1.7.0.12.nupkg.sha512",
+        "xamarin.androidx.media.nuspec"
+      ]
+    },
+    "Xamarin.AndroidX.Media3.Common/1.8.0": {
+      "sha512": "NLAGjOe0l5h8/9e6dkQ6KEJc8qXpZnEYG+rVCKoOpVHYiyhuLTJTwkTuLDvCp4DwU9dWA0byV0Fkh4Vlmr48rA==",
+      "type": "package",
+      "path": "xamarin.androidx.media3.common/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "aar/androidx.media3.media3-common.aar",
+        "build/net10.0-android35.0/Xamarin.AndroidX.Media3.Common.targets",
+        "build/net8.0-android34.0/Xamarin.AndroidX.Media3.Common.targets",
+        "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Common.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Media3.Common.targets",
+        "icon.png",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Common.dll",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Common.pdb",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Common.xml",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Common.dll",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Common.pdb",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Common.xml",
+        "proguard/proguard.txt",
+        "readme.md",
+        "xamarin.androidx.media3.common.1.8.0.nupkg.sha512",
+        "xamarin.androidx.media3.common.nuspec"
+      ]
+    },
+    "Xamarin.AndroidX.Media3.Container/1.8.0": {
+      "sha512": "TJdlubLmUl2PayM9dZJ/pTh5NudADP4Ng4KxSfzi4vYJeoG/OKox/olX2HkMpMy2Pl4Y7zpOSKg1VlmavrTKqQ==",
+      "type": "package",
+      "path": "xamarin.androidx.media3.container/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "aar/androidx.media3.media3-container.aar",
+        "build/net10.0-android35.0/Xamarin.AndroidX.Media3.Container.targets",
+        "build/net8.0-android34.0/Xamarin.AndroidX.Media3.Container.targets",
+        "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Container.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Media3.Container.targets",
+        "icon.png",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Container.dll",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Container.pdb",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Container.xml",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Container.dll",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Container.pdb",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Container.xml",
+        "readme.md",
+        "xamarin.androidx.media3.container.1.8.0.nupkg.sha512",
+        "xamarin.androidx.media3.container.nuspec"
+      ]
+    },
+    "Xamarin.AndroidX.Media3.Database/1.8.0": {
+      "sha512": "BbOVYXROQXr6WTSofh5tVeYZhx6sYtCuPt2MLtwgLGWgOf7kSgqq4MESSYJXOOYyIACnEreGaonTDBtRzc5dTw==",
+      "type": "package",
+      "path": "xamarin.androidx.media3.database/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "aar/androidx.media3.media3-database.aar",
+        "build/net10.0-android35.0/Xamarin.AndroidX.Media3.Database.targets",
+        "build/net8.0-android34.0/Xamarin.AndroidX.Media3.Database.targets",
+        "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Database.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Media3.Database.targets",
+        "icon.png",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Database.dll",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Database.pdb",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Database.xml",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Database.dll",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Database.pdb",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Database.xml",
+        "readme.md",
+        "xamarin.androidx.media3.database.1.8.0.nupkg.sha512",
+        "xamarin.androidx.media3.database.nuspec"
+      ]
+    },
+    "Xamarin.AndroidX.Media3.DataSource/1.8.0": {
+      "sha512": "wzVN5KgWig92k/0aMVsxPpSAl9dWiklodG3Z4w0+3ge6zfIlCxLpkGor3nvidLOrVYj0BRNFRb7N2/488WfVCw==",
+      "type": "package",
+      "path": "xamarin.androidx.media3.datasource/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "aar/androidx.media3.media3-datasource.aar",
+        "build/net10.0-android35.0/Xamarin.AndroidX.Media3.DataSource.targets",
+        "build/net8.0-android34.0/Xamarin.AndroidX.Media3.DataSource.targets",
+        "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.DataSource.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Media3.DataSource.targets",
+        "icon.png",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.DataSource.dll",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.DataSource.pdb",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.DataSource.xml",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.DataSource.dll",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.DataSource.pdb",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.DataSource.xml",
+        "proguard/proguard.txt",
+        "readme.md",
+        "xamarin.androidx.media3.datasource.1.8.0.nupkg.sha512",
+        "xamarin.androidx.media3.datasource.nuspec"
+      ]
+    },
+    "Xamarin.AndroidX.Media3.Decoder/1.8.0": {
+      "sha512": "4f/LD7BIH7wzOWH6dJrdkgUULdn5sJHSj1mu8EL1+nwGxaC8SBcedxfZgapscJQ73Q4wxRsPR8rS1ekqEY0JVg==",
+      "type": "package",
+      "path": "xamarin.androidx.media3.decoder/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "aar/androidx.media3.media3-decoder.aar",
+        "build/net10.0-android35.0/Xamarin.AndroidX.Media3.Decoder.targets",
+        "build/net8.0-android34.0/Xamarin.AndroidX.Media3.Decoder.targets",
+        "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Decoder.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Media3.Decoder.targets",
+        "icon.png",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Decoder.dll",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Decoder.pdb",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Decoder.xml",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Decoder.dll",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Decoder.pdb",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Decoder.xml",
+        "readme.md",
+        "xamarin.androidx.media3.decoder.1.8.0.nupkg.sha512",
+        "xamarin.androidx.media3.decoder.nuspec"
+      ]
+    },
+    "Xamarin.AndroidX.Media3.ExoPlayer/1.8.0": {
+      "sha512": "kSaUOxfz1OGvBrYiE6rNA8crbrIGENlP/C03M/0jOPx5nn2GD6ERSfjKyEXLSfLpzI9q59DH01+zHJedneoQBw==",
+      "type": "package",
+      "path": "xamarin.androidx.media3.exoplayer/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "aar/androidx.media3.media3-exoplayer.aar",
+        "build/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.targets",
+        "build/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.targets",
+        "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.targets",
+        "icon.png",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.dll",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.pdb",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.xml",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.dll",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.pdb",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.xml",
+        "proguard/proguard.txt",
+        "readme.md",
+        "xamarin.androidx.media3.exoplayer.1.8.0.nupkg.sha512",
+        "xamarin.androidx.media3.exoplayer.nuspec"
+      ]
+    },
+    "Xamarin.AndroidX.Media3.ExoPlayer.Dash/1.8.0": {
+      "sha512": "5RI9Ibyy6vhqAco3uZhpgQkXMU5vIrrnvFTt2W9Sbx7NufEp+ec9nTHFxKZeAkE2mgvVAe3jKdXyMghfGuAvSg==",
+      "type": "package",
+      "path": "xamarin.androidx.media3.exoplayer.dash/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "aar/androidx.media3.media3-exoplayer-dash.aar",
+        "build/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.targets",
+        "build/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.targets",
+        "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.targets",
+        "icon.png",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.dll",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.pdb",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.xml",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.dll",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.pdb",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.Dash.xml",
+        "readme.md",
+        "xamarin.androidx.media3.exoplayer.dash.1.8.0.nupkg.sha512",
+        "xamarin.androidx.media3.exoplayer.dash.nuspec"
+      ]
+    },
+    "Xamarin.AndroidX.Media3.ExoPlayer.Hls/1.8.0": {
+      "sha512": "SjBM8p7gH55fcWJFODLn8ZWvvQPzuHmbiVUYXft5u3jyxa1YSt5MtE5mDNq5CUrripxdUpOog8X0hjNnjx/nLA==",
+      "type": "package",
+      "path": "xamarin.androidx.media3.exoplayer.hls/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "aar/androidx.media3.media3-exoplayer-hls.aar",
+        "build/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.targets",
+        "build/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.targets",
+        "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.targets",
+        "icon.png",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.dll",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.pdb",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.xml",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.dll",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.pdb",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.Hls.xml",
+        "readme.md",
+        "xamarin.androidx.media3.exoplayer.hls.1.8.0.nupkg.sha512",
+        "xamarin.androidx.media3.exoplayer.hls.nuspec"
+      ]
+    },
+    "Xamarin.AndroidX.Media3.ExoPlayer.Rtsp/1.8.0": {
+      "sha512": "T/IgLbOH4Lxdp4OftJSYt/MRfZv2r07nRSO/tCSJynSIXnB4fkfsCG6TtkwWiL2eB/dLqqZCgG0Zm5ZlerXnaQ==",
+      "type": "package",
+      "path": "xamarin.androidx.media3.exoplayer.rtsp/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "aar/androidx.media3.media3-exoplayer-rtsp.aar",
+        "build/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.targets",
+        "build/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.targets",
+        "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.targets",
+        "icon.png",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.dll",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.pdb",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.xml",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.dll",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.pdb",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.ExoPlayer.Rtsp.xml",
+        "readme.md",
+        "xamarin.androidx.media3.exoplayer.rtsp.1.8.0.nupkg.sha512",
+        "xamarin.androidx.media3.exoplayer.rtsp.nuspec"
+      ]
+    },
+    "Xamarin.AndroidX.Media3.Extractor/1.8.0": {
+      "sha512": "/D+P7rSxUvnbgstjLER8jSNRm2nuPad6Wh2eqIZ+Jo5eH965Ud2jmxO42ra2zZ91sQSoWfiFpQXlw8qcCnOgGw==",
+      "type": "package",
+      "path": "xamarin.androidx.media3.extractor/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "aar/androidx.media3.media3-extractor.aar",
+        "build/net10.0-android35.0/Xamarin.AndroidX.Media3.Extractor.targets",
+        "build/net8.0-android34.0/Xamarin.AndroidX.Media3.Extractor.targets",
+        "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Extractor.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Media3.Extractor.targets",
+        "icon.png",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Extractor.dll",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Extractor.pdb",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Extractor.xml",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Extractor.dll",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Extractor.pdb",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Extractor.xml",
+        "proguard/proguard.txt",
+        "readme.md",
+        "xamarin.androidx.media3.extractor.1.8.0.nupkg.sha512",
+        "xamarin.androidx.media3.extractor.nuspec"
+      ]
+    },
+    "Xamarin.AndroidX.Media3.Session/1.8.0": {
+      "sha512": "9w34WlOGrkhvV/0tyx9jnIv5LiVrzoSy+j/tzWTsYfOXPjIHWBRvpvUGGbfQmwppgEUAyYwYx/P65a5BAYPNGg==",
+      "type": "package",
+      "path": "xamarin.androidx.media3.session/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "aar/androidx.media3.media3-session.aar",
+        "build/net10.0-android35.0/Xamarin.AndroidX.Media3.Session.targets",
+        "build/net8.0-android34.0/Xamarin.AndroidX.Media3.Session.targets",
+        "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Session.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Media3.Session.targets",
+        "icon.png",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Session.dll",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Session.pdb",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Session.xml",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Session.dll",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Session.pdb",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Session.xml",
+        "readme.md",
+        "xamarin.androidx.media3.session.1.8.0.nupkg.sha512",
+        "xamarin.androidx.media3.session.nuspec"
+      ]
+    },
+    "Xamarin.AndroidX.Media3.Ui/1.8.0": {
+      "sha512": "2Snh1YJzjdc8vznFGus3yiZE9utF3ejQld8/zYPsRp7J9Zl3quOAFPx7z4yz09ikSLkuGLIXmvdBOHbQaMIBUA==",
+      "type": "package",
+      "path": "xamarin.androidx.media3.ui/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "aar/androidx.media3.media3-ui.aar",
+        "build/net10.0-android35.0/Xamarin.AndroidX.Media3.Ui.targets",
+        "build/net8.0-android34.0/Xamarin.AndroidX.Media3.Ui.targets",
+        "buildTransitive/net10.0-android35.0/Xamarin.AndroidX.Media3.Ui.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.AndroidX.Media3.Ui.targets",
+        "icon.png",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Ui.dll",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Ui.pdb",
+        "lib/net10.0-android36.0/Xamarin.AndroidX.Media3.Ui.xml",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Ui.dll",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Ui.pdb",
+        "lib/net8.0-android34.0/Xamarin.AndroidX.Media3.Ui.xml",
+        "proguard/proguard.txt",
+        "readme.md",
+        "xamarin.androidx.media3.ui.1.8.0.nupkg.sha512",
+        "xamarin.androidx.media3.ui.nuspec"
+      ]
+    },
     "Xamarin.AndroidX.Navigation.Common/2.9.2.1": {
       "sha512": "LrxZcMFuSXKYKB1bYcKLdKSHu7cEPOoy8g7Rlqf1GjV7bzf+8YjtGIRNWBYgp7zELuSsoin+Esc2T1W5U7tmSg==",
       "type": "package",
@@ -21183,27 +23453,88 @@
         "xamarin.google.errorprone.annotations.nuspec"
       ]
     },
-    "Xamarin.Google.Guava.ListenableFuture/1.0.0.29": {
-      "sha512": "5w1ErO9PmpGR3ii2qJkzV1ntOJGSrd7NyOdop3Sw+q/DQ6oCdyoOq3jbJ3Stg0ACOUItN7XO6EqAvNQ8jQaV0g==",
+    "Xamarin.Google.Guava/33.4.8.3": {
+      "sha512": "A0HpfNDuyjC6P7NWnO6K7JCQfg5DVOimLglAPbY5zBchJvoQPWHFZVQITk1AUlKl4jVzhqr0CScbyE3mSOQeBw==",
       "type": "package",
-      "path": "xamarin.google.guava.listenablefuture/1.0.0.29",
+      "path": "xamarin.google.guava/33.4.8.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "THIRD-PARTY-NOTICES.txt",
         "icon.png",
-        "lib/net10.0-android36.0/Xamarin.Google.Guava.ListenableFuture.aar",
-        "lib/net10.0-android36.0/Xamarin.Google.Guava.ListenableFuture.dll",
-        "lib/net10.0-android36.0/Xamarin.Google.Guava.ListenableFuture.pdb",
-        "lib/net10.0-android36.0/Xamarin.Google.Guava.ListenableFuture.xml",
-        "lib/net8.0-android34.0/Xamarin.Google.Guava.ListenableFuture.aar",
-        "lib/net8.0-android34.0/Xamarin.Google.Guava.ListenableFuture.dll",
-        "lib/net8.0-android34.0/Xamarin.Google.Guava.ListenableFuture.pdb",
-        "lib/net8.0-android34.0/Xamarin.Google.Guava.ListenableFuture.xml",
+        "lib/net10.0-android36.0/Xamarin.Google.Guava.aar",
+        "lib/net10.0-android36.0/Xamarin.Google.Guava.dll",
+        "lib/net10.0-android36.0/Xamarin.Google.Guava.pdb",
+        "lib/net10.0-android36.0/Xamarin.Google.Guava.xml",
+        "lib/net8.0-android34.0/Xamarin.Google.Guava.aar",
+        "lib/net8.0-android34.0/Xamarin.Google.Guava.dll",
+        "lib/net8.0-android34.0/Xamarin.Google.Guava.pdb",
+        "lib/net8.0-android34.0/Xamarin.Google.Guava.xml",
         "readme.md",
-        "xamarin.google.guava.listenablefuture.1.0.0.29.nupkg.sha512",
+        "xamarin.google.guava.33.4.8.3.nupkg.sha512",
+        "xamarin.google.guava.nuspec"
+      ]
+    },
+    "Xamarin.Google.Guava.FailureAccess/1.0.3.3": {
+      "sha512": "VWVefoO4vX67qi7grIQTdbJpd08e14rDUQR2jcD1Sexy6fRkZAWpE4i6Y2ejxyDPx7YzOpO3Che0sMoIUIwbUQ==",
+      "type": "package",
+      "path": "xamarin.google.guava.failureaccess/1.0.3.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "icon.png",
+        "lib/net10.0-android36.0/Xamarin.Google.Guava.FailureAccess.aar",
+        "lib/net10.0-android36.0/Xamarin.Google.Guava.FailureAccess.dll",
+        "lib/net10.0-android36.0/Xamarin.Google.Guava.FailureAccess.pdb",
+        "lib/net10.0-android36.0/Xamarin.Google.Guava.FailureAccess.xml",
+        "lib/net8.0-android34.0/Xamarin.Google.Guava.FailureAccess.aar",
+        "lib/net8.0-android34.0/Xamarin.Google.Guava.FailureAccess.dll",
+        "lib/net8.0-android34.0/Xamarin.Google.Guava.FailureAccess.pdb",
+        "lib/net8.0-android34.0/Xamarin.Google.Guava.FailureAccess.xml",
+        "readme.md",
+        "xamarin.google.guava.failureaccess.1.0.3.3.nupkg.sha512",
+        "xamarin.google.guava.failureaccess.nuspec"
+      ]
+    },
+    "Xamarin.Google.Guava.ListenableFuture/9999.0.0": {
+      "sha512": "TFcYM0FvRuHrpgyiCQp/uSWSLVRiN8w9vZ9FclPMUvyFOkaRZ+xItV0CAVw0QCpwARvDeQaEV6Egujru11Hgcg==",
+      "type": "package",
+      "path": "xamarin.google.guava.listenablefuture/9999.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/monoandroid90/Xamarin.Google.Guava.ListenableFuture.dll",
+        "lib/monoandroid90/Xamarin.Google.Guava.ListenableFuture.xml",
+        "lib/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.dll",
+        "lib/net6.0-android31.0/Xamarin.Google.Guava.ListenableFuture.xml",
+        "xamarin.google.guava.listenablefuture.9999.0.0.nupkg.sha512",
         "xamarin.google.guava.listenablefuture.nuspec"
+      ]
+    },
+    "Xamarin.Google.J2Objc.Annotations/3.0.0.11": {
+      "sha512": "5aFHH5ZGzxOth7OzsqxbpXLH9XGBMlW/R9Tq2+1PnmwH0xksa/Ia6fwMEzAKVFvogNKYMM2UJcVpmRFFX9OtFg==",
+      "type": "package",
+      "path": "xamarin.google.j2objc.annotations/3.0.0.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/net10.0-android35.0/Xamarin.Google.J2Objc.Annotations.targets",
+        "build/net8.0-android34.0/Xamarin.Google.J2Objc.Annotations.targets",
+        "buildTransitive/net10.0-android35.0/Xamarin.Google.J2Objc.Annotations.targets",
+        "buildTransitive/net8.0-android34.0/Xamarin.Google.J2Objc.Annotations.targets",
+        "icon.png",
+        "jar/j2objc-annotations.jar",
+        "lib/net10.0-android35.0/_._",
+        "lib/net8.0-android34.0/_._",
+        "readme.md",
+        "xamarin.google.j2objc.annotations.3.0.0.11.nupkg.sha512",
+        "xamarin.google.j2objc.annotations.nuspec"
       ]
     },
     "Xamarin.Jetbrains.Annotations/26.0.2.3": {
@@ -21393,23 +23724,26 @@
   },
   "projectFileDependencyGroups": {
     "net10.0-android36.0": [
+      "CommunityToolkit.Maui.MediaElement >= 9.0.0",
       "CommunityToolkit.Mvvm >= 8.4.2",
       "Microsoft.Extensions.Logging.Debug >= 10.0.0",
-      "Microsoft.Maui.Controls >= 10.0.20",
+      "Microsoft.Maui.Controls >= 10.0.41",
       "Microsoft.NET.ILLink.Tasks >= 10.0.6",
       "SpotifyAPI.Web >= 7.4.2"
     ],
     "net10.0-ios26.2": [
+      "CommunityToolkit.Maui.MediaElement >= 9.0.0",
       "CommunityToolkit.Mvvm >= 8.4.2",
       "Microsoft.Extensions.Logging.Debug >= 10.0.0",
-      "Microsoft.Maui.Controls >= 10.0.20",
+      "Microsoft.Maui.Controls >= 10.0.41",
       "Microsoft.NET.ILLink.Tasks >= 10.0.6",
       "SpotifyAPI.Web >= 7.4.2"
     ],
     "net10.0-maccatalyst26.2": [
+      "CommunityToolkit.Maui.MediaElement >= 9.0.0",
       "CommunityToolkit.Mvvm >= 8.4.2",
       "Microsoft.Extensions.Logging.Debug >= 10.0.0",
-      "Microsoft.Maui.Controls >= 10.0.20",
+      "Microsoft.Maui.Controls >= 10.0.41",
       "Microsoft.NET.ILLink.Tasks >= 10.0.6",
       "SpotifyAPI.Web >= 7.4.2"
     ]
@@ -21469,6 +23803,10 @@
       "net10.0-android36.0": {
         "targetAlias": "net10.0-android",
         "dependencies": {
+          "CommunityToolkit.Maui.MediaElement": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
             "version": "[8.4.2, )"
@@ -21479,7 +23817,7 @@
           },
           "Microsoft.Maui.Controls": {
             "target": "Package",
-            "version": "[10.0.20, )"
+            "version": "[10.0.41, )"
           },
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
@@ -21793,6 +24131,10 @@
       "net10.0-ios26.2": {
         "targetAlias": "net10.0-ios",
         "dependencies": {
+          "CommunityToolkit.Maui.MediaElement": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
             "version": "[8.4.2, )"
@@ -21803,7 +24145,7 @@
           },
           "Microsoft.Maui.Controls": {
             "target": "Package",
-            "version": "[10.0.20, )"
+            "version": "[10.0.41, )"
           },
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
@@ -22117,6 +24459,10 @@
       "net10.0-maccatalyst26.2": {
         "targetAlias": "net10.0-maccatalyst",
         "dependencies": {
+          "CommunityToolkit.Maui.MediaElement": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
             "version": "[8.4.2, )"
@@ -22127,7 +24473,7 @@
           },
           "Microsoft.Maui.Controls": {
             "target": "Package",
-            "version": "[10.0.20, )"
+            "version": "[10.0.41, )"
           },
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
