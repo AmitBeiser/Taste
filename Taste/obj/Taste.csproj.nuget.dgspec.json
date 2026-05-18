@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/amitbeiser/Desktop/Taste/Taste/Taste.csproj": {}
+    "/Users/amitbeiser/Project/Taste/Taste/Taste.csproj": {}
   },
   "projects": {
-    "/Users/amitbeiser/Desktop/Taste/Taste/Taste.csproj": {
+    "/Users/amitbeiser/Project/Taste/Taste/Taste.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/amitbeiser/Desktop/Taste/Taste/Taste.csproj",
+        "projectUniqueName": "/Users/amitbeiser/Project/Taste/Taste/Taste.csproj",
         "projectName": "Taste",
-        "projectPath": "/Users/amitbeiser/Desktop/Taste/Taste/Taste.csproj",
+        "projectPath": "/Users/amitbeiser/Project/Taste/Taste/Taste.csproj",
         "packagesPath": "/Users/amitbeiser/.nuget/packages/",
-        "outputPath": "/Users/amitbeiser/Desktop/Taste/Taste/obj/",
+        "outputPath": "/Users/amitbeiser/Project/Taste/Taste/obj/",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "configFilePaths": [

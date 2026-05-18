@@ -1,0 +1,5 @@
+<api>
+  <acw-types partial-assembly-name="Xamarin.AndroidX.Media3.Container" module-name="Xamarin.AndroidX.Media3.Container.dll">
+    <type assembly-qualified-name="AndroidX.Media3.Container.ReorderingBufferQueue+IOutputConsumer, Xamarin.AndroidX.Media3.Container, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" compat-jni-name="androidx.media3.container.ReorderingBufferQueue$OutputConsumer" java-key="androidx.media3.container.ReorderingBufferQueue$OutputConsumer" managed-key="AndroidX.Media3.Container.ReorderingBufferQueue.IOutputConsumer" partial-assembly-qualified-name="AndroidX.Media3.Container.ReorderingBufferQueue+IOutputConsumer, Xamarin.AndroidX.Media3.Container" />
+  </acw-types>
+</api>

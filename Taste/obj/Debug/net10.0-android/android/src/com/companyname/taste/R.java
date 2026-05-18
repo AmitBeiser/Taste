@@ -12520,9 +12520,10 @@ public final class R {
     public static final int notification_tile_bg=0x7f080181;
     public static final int notify_panel_notification_icon_bg=0x7f080182;
     public static final int profile_icon=0x7f080183;
-    public static final int test_level_drawable=0x7f080184;
-    public static final int tooltip_frame_dark=0x7f080185;
-    public static final int tooltip_frame_light=0x7f080186;
+    public static final int splash=0x7f080184;
+    public static final int test_level_drawable=0x7f080185;
+    public static final int tooltip_frame_dark=0x7f080186;
+    public static final int tooltip_frame_light=0x7f080187;
   }
   public static final class font {
     public static final int roboto_medium_numbers=0x7f090000;

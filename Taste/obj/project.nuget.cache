@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1vVdGNM4p5U=",
+  "dgSpecHash": "Fw6dWu2Ztjg=",
   "success": true,
-  "projectFilePath": "/Users/amitbeiser/Desktop/Taste/Taste/Taste.csproj",
+  "projectFilePath": "/Users/amitbeiser/Project/Taste/Taste/Taste.csproj",
   "expectedPackageFiles": [
     "/Users/amitbeiser/.nuget/packages/communitytoolkit.maui.mediaelement/9.0.0/communitytoolkit.maui.mediaelement.9.0.0.nupkg.sha512",
     "/Users/amitbeiser/.nuget/packages/communitytoolkit.mvvm/8.4.2/communitytoolkit.mvvm.8.4.2.nupkg.sha512",

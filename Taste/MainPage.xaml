@@ -14,71 +14,159 @@
                               ShouldAutoPlay="True"
                               IsVisible="False" />
 
+
+
+
         <Grid Grid.Row="0" ColumnDefinitions="*, Auto" Padding="20, 15, 20, 10">
             <Label Text="Taste" 
                    FontSize="28" 
+                   FontFamily="Poppins"
                    FontAttributes="Bold" 
-                   TextColor="#1DB954" 
+                   TextColor="black" 
                    VerticalOptions="Center" />
             
+
+
+
             <HorizontalStackLayout Grid.Column="1" Spacing="20" VerticalOptions="Center">
-                <Label Text="➕" FontSize="20" TextColor="White" />
-                <Label Text="🔔" FontSize="20" TextColor="White" />
+                <Label Text="🔍" FontSize="20" TextColor="Black">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ToggleSearchCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="➕" FontSize="20" TextColor="Black" />
+                <Label Text="🔔" FontSize="20" TextColor="Black" />
             </HorizontalStackLayout>
         </Grid>
 
-        <CollectionView Grid.Row="1" 
-                        ItemsSource="{Binding PublicStories}"
-                        SelectionMode="None">
-            <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Vertical" ItemSpacing="0" />
-            </CollectionView.ItemsLayout>
 
-            <CollectionView.ItemTemplate>
+
+
+        <CarouselView x:Name="SongCarouselView"
+                      Grid.Row="1" 
+                      ItemsSource="{Binding PublicStories}"
+                      CurrentItemChanged="OnCarouselCurrentItemChanged"
+                      Loop="False">
+
+            <CarouselView.ItemTemplate>
                 <DataTemplate>
-                    <Grid HeightRequest="650">
-                        <Grid.GestureRecognizers>
-                            <TapGestureRecognizer 
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:MainViewModel}}, Path=PlaySongCommand}"
-                                CommandParameter="{Binding .}" />
-                        </Grid.GestureRecognizers>
+                    <Grid HeightRequest="700" Padding="0" BackgroundColor="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" /> 
+                            <RowDefinition Height="*" />    
+                            <RowDefinition Height="Auto" /> 
+                            <RowDefinition Height="Auto" /> 
+                        </Grid.RowDefinitions>
 
-                        <Image Source="{Binding UserUploadedImageUrl}" 
-                               Aspect="AspectFill" />
+                        <Grid Grid.Row="0" ColumnDefinitions="Auto, *, Auto" Padding="15, 10">
+                            <Border Grid.Column="0" HeightRequest="40" WidthRequest="40" StrokeShape="RoundRectangle 20" StrokeThickness="0">
+                                <Image Source="{Binding UserProfileImageUrl}" Aspect="AspectFill" />
+                            </Border>
 
-                        <BoxView VerticalOptions="Fill">
-                            <BoxView.Background>
-                                <LinearGradientBrush EndPoint="0,1">
-                                    <GradientStop Color="Transparent" Offset="0.3" />
-                                    <GradientStop Color="#99000000" Offset="0.7" />
-                                    <GradientStop Color="Black" Offset="1" />
-                                </LinearGradientBrush>
-                            </BoxView.Background>
-                        </BoxView>
-
-                        <VerticalStackLayout VerticalOptions="End" Padding="20, 40" Spacing="15">
-                            <HorizontalStackLayout Spacing="15" VerticalOptions="Center">
-                                <Border StrokeShape="RoundRectangle 12" WidthRequest="70" HeightRequest="70" StrokeThickness="0">
-                                    <Image Source="{Binding AlbumImageUrl}" Aspect="AspectFill" />
-                                </Border>
-
-                                <VerticalStackLayout VerticalOptions="Center">
-                                    <Label Text="{Binding TrackName}" FontSize="24" FontAttributes="Bold" TextColor="White" />
-                                    <Label Text="{Binding ArtistName}" FontSize="16" TextColor="#CCCCCC" />
-                                </VerticalStackLayout>
+                            <HorizontalStackLayout Grid.Column="1" Spacing="8" VerticalOptions="Center">
+                                <Label Text="{Binding UserUsername}" FontSize="15" FontAttributes="Bold" TextColor="Black" />
+                                <Label Text="{Binding PostTimeText}" FontSize="13" TextColor="#999999" />
                             </HorizontalStackLayout>
 
-                            <Grid ColumnDefinitions="*, Auto">
-                                <Label Text="Just now" TextColor="#999999" FontSize="13" VerticalOptions="Center" />
-                                <HorizontalStackLayout Grid.Column="1" Spacing="25">
-                                    <Button Text="❤️" BackgroundColor="Transparent" FontSize="26" Padding="0" />
-                                    <Button Text="🔗" BackgroundColor="Transparent" FontSize="26" Padding="0" />
-                                </HorizontalStackLayout>
+                            <Label Grid.Column="2" Text="⋯" FontSize="20" TextColor="#666666" VerticalOptions="Center" Padding="0, 0, 10, 0"/>
+                        </Grid>
+
+                        <Border Grid.Row="1" Margin="15, 5, 15, 15" StrokeShape="RoundRectangle 10" StrokeThickness="1" Stroke="#E0E0E0" BackgroundColor="White">
+                            <Border.Shadow>
+                                <Shadow Brush="Black" Offset="0,4" Radius="8" Opacity="0.1" />
+                            </Border.Shadow>
+                            
+                            <Grid RowDefinitions="*, Auto" Padding="15, 15, 15, 10">
+                                <Border HeightRequest="300" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Start" 
+                                        StrokeThickness="0" StrokeShape="RoundRectangle 2" Padding="2">
+                                    <Image Source="{Binding UserUploadedImageUrl}" Aspect="AspectFill" />
+                                </Border>
+
+                                <Grid Grid.Row="1" ColumnDefinitions="*, Auto" Padding="0, 15, 0, 0" ColumnSpacing="10">
+                                    <VerticalStackLayout VerticalOptions="Center">
+                                        <Label Text="{Binding TrackName}" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+                                        <Label Text="{Binding ArtistName}" FontSize="14" TextColor="#666666" />
+                                    </VerticalStackLayout>
+                                    
+                                    <HorizontalStackLayout Grid.Column="1" Spacing="15" VerticalOptions="Center">
+                                        <Label Text="❤️" FontSize="18" TextColor="#F44336" VerticalOptions="Center" />
+                                        <Label Text="➕" FontSize="18" TextColor="#666666" VerticalOptions="Center" />
+                                    </HorizontalStackLayout>
+                                </Grid>
                             </Grid>
-                        </VerticalStackLayout>
+                        </Border>
+
+
+
+
+
+                        
+
+                        <Grid Grid.Row="2" ColumnDefinitions="*, Auto" Padding="15, 0, 15, 10">
+                            <HorizontalStackLayout Spacing="20">
+                                <Label Text="🔥" FontSize="26" TextColor="Black" VerticalOptions="Center" />
+                                <Label Text="💬" FontSize="26" TextColor="Black" VerticalOptions="Center" />
+                                <Label Text="🔗" FontSize="26" TextColor="Black" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            
+                            <Label Grid.Column="1" Text="🔖" FontSize="26" TextColor="Black" VerticalOptions="Center" Padding="0, 0, 5, 0"/>
+                        </Grid>
+
+                        <Grid Grid.Row="3" ColumnDefinitions="Auto, *" Padding="15, 0, 15, 15">
+                            <Label Text="{Binding UserUsername}" FontSize="14" FontAttributes="Bold" TextColor="Black" VerticalOptions="Center" Padding="0,0,5,0"/>
+                            <Label Grid.Column="1" Text="{Binding PostCaption}" FontSize="14" TextColor="Black" LineBreakMode="WordWrap" />
+                        </Grid>
                     </Grid>
                 </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <Grid Grid.Row="1" 
+              BackgroundColor="White" 
+              IsVisible="{Binding IsSearchMode}"
+              RowDefinitions="Auto, *">
+            
+            <VerticalStackLayout Padding="20, 10" Spacing="10">
+                <Grid ColumnDefinitions="*, Auto">
+                    <Border StrokeShape="RoundRectangle 20" StrokeThickness="1" Stroke="#E0E0E0" Padding="15,0">
+                        <Entry Placeholder="Search for a song..." 
+                               Text="{Binding SearchQuery}"
+                               ReturnType="Search"
+                               ReturnCommand="{Binding PerformSearchCommand}"
+                               TextColor="Black"
+                               PlaceholderColor="Gray" />
+                    </Border>
+                    <Button Grid.Column="1" Text="Cancel" Command="{Binding ToggleSearchCommand}" BackgroundColor="Transparent" TextColor="#1DB954" />
+                </Grid>
+            </VerticalStackLayout>
+
+            <CollectionView Grid.Row="1" ItemsSource="{Binding SearchResults}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="Auto, *, Auto" Padding="20, 10" ColumnSpacing="15">
+                            <Border StrokeShape="RoundRectangle 5" HeightRequest="50" WidthRequest="50" StrokeThickness="0">
+                                <Image Source="{Binding AlbumImageUrl}" Aspect="AspectFill" />
+                            </Border>
+
+                            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                                <Label Text="{Binding TrackName}" FontAttributes="Bold" TextColor="Black" LineBreakMode="TailTruncation" />
+                                <Label Text="{Binding ArtistName}" FontSize="12" TextColor="Gray" />
+                            </VerticalStackLayout>
+
+                            <HorizontalStackLayout Grid.Column="2" Spacing="10" VerticalOptions="Center">
+                                <Button Text="▶️" FontSize="12" HeightRequest="35" WidthRequest="35" 
+                                        CornerRadius="17" BackgroundColor="#F0F0F0"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:MainViewModel}}, Path=PlaySongCommand}"
+                                        CommandParameter="{Binding .}" />
+                                <Button Text="➕" FontSize="12" HeightRequest="35" WidthRequest="35" 
+                                        CornerRadius="17" BackgroundColor="#1DB954" TextColor="White"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:MainViewModel}}, Path=SelectTrackCommand}"
+                                        CommandParameter="{Binding .}" />
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
     </Grid>
 </ContentPage>

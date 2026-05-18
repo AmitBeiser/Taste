@@ -23,15 +23,87 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="M:Taste.ViewModels.MainViewModel.InitializeAsync">
+            <summary>
+            מנהל את כל שלבי האתחול של המסך: חיבור לספוטיפיי, טעינת שירים והפעלת השיר הראשון.
+            </summary>
+        </member>
+        <member name="M:Taste.ViewModels.MainViewModel.LoadStoriesFromSpotifyAsync">
+            <summary>
+            מחפש בספוטיפיי שירים פופולריים ומייצר מהם את רשימת הפוסטים (PublicStories)
+            </summary>
+        </member>
+        <member name="M:Taste.ViewModels.MainViewModel.InitializeAudioAsync">
+            <summary>
+            מפעיל את המוזיקה של הפוסט הראשון כשהאפליקציה נפתחת
+            </summary>
+        </member>
+        <member name="M:Taste.ViewModels.MainViewModel.PlaySongAsync(Taste.Models.SongPost)">
+            <summary>
+            ה-Command שמקושר לנגן. מופעל בגלילה בפיד, או בלחיצה על כפתור ה-Play בחיפוש.
+            </summary>
+        </member>
+        <member name="M:Taste.ViewModels.MainViewModel.ToggleSearch">
+            <summary>
+            פותח או סוגר את מסך החיפוש, ומאפס נתונים בעת סגירה
+            </summary>
+        </member>
+        <member name="M:Taste.ViewModels.MainViewModel.PerformSearchAsync">
+            <summary>
+            פונה לספוטיפיי ומחפש שירים לפי מה שהמשתמש הקליד
+            </summary>
+        </member>
+        <member name="M:Taste.ViewModels.MainViewModel.SelectTrackAsync(Taste.Models.SongPost)">
+            <summary>
+            פקודה שמופעלת בלחיצה על כפתור ה-➕ ברשימת החיפוש ומעבירה אותנו לשלב הבא
+            </summary>
+        </member>
+        <member name="M:Taste.ViewModels.MainViewModel.GetBackupPreviewUrlAsync(System.String,System.String)">
+            <summary>
+            פונקציית עזר פנימית שפונה ל-iTunes API כדי להשיג את קטע ה-30 שניות החסר
+            </summary>
+        </member>
+        <member name="M:Taste.ViewModels.MainViewModel.LoadStoriesDummy">
+            <summary>
+            רשימת גיבוי עם נתונים פיקטיביים למקרה שאין אינטרנט או שהחיבור לספוטיפיי נכשל
+            </summary>
         </member>
         <member name="P:Taste.ViewModels.MainViewModel.CurrentSongUrl">
             <inheritdoc cref="F:Taste.ViewModels.MainViewModel._currentSongUrl"/>
+        </member>
+        <member name="P:Taste.ViewModels.MainViewModel.IsSearchMode">
+            <inheritdoc cref="F:Taste.ViewModels.MainViewModel._isSearchMode"/>
+        </member>
+        <member name="P:Taste.ViewModels.MainViewModel.SearchQuery">
+            <inheritdoc cref="F:Taste.ViewModels.MainViewModel._searchQuery"/>
         </member>
         <member name="F:Taste.ViewModels.MainViewModel.playSongCommand">
             <summary>The backing field for <see cref="P:Taste.ViewModels.MainViewModel.PlaySongCommand"/>.</summary>
         </member>
         <member name="P:Taste.ViewModels.MainViewModel.PlaySongCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:Taste.ViewModels.MainViewModel.PlaySong(Taste.Models.SongPost)"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Taste.ViewModels.MainViewModel.PlaySongAsync(Taste.Models.SongPost)"/>.</summary>
+        </member>
+        <member name="F:Taste.ViewModels.MainViewModel.toggleSearchCommand">
+            <summary>The backing field for <see cref="P:Taste.ViewModels.MainViewModel.ToggleSearchCommand"/>.</summary>
+        </member>
+        <member name="P:Taste.ViewModels.MainViewModel.ToggleSearchCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Taste.ViewModels.MainViewModel.ToggleSearch"/>.</summary>
+        </member>
+        <member name="F:Taste.ViewModels.MainViewModel.performSearchCommand">
+            <summary>The backing field for <see cref="P:Taste.ViewModels.MainViewModel.PerformSearchCommand"/>.</summary>
+        </member>
+        <member name="P:Taste.ViewModels.MainViewModel.PerformSearchCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Taste.ViewModels.MainViewModel.PerformSearchAsync"/>.</summary>
+        </member>
+        <member name="F:Taste.ViewModels.MainViewModel.selectTrackCommand">
+            <summary>The backing field for <see cref="P:Taste.ViewModels.MainViewModel.SelectTrackCommand"/>.</summary>
+        </member>
+        <member name="P:Taste.ViewModels.MainViewModel.SelectTrackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Taste.ViewModels.MainViewModel.SelectTrackAsync(Taste.Models.SongPost)"/>.</summary>
         </member>
         <member name="F:Taste.ViewModels.MainViewModel.likeStoryCommand">
             <summary>The backing field for <see cref="P:Taste.ViewModels.MainViewModel.LikeStoryCommand"/>.</summary>
@@ -66,6 +138,12 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentSongUrl">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentSongUrl" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsSearchMode">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsSearchMode" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SearchQuery">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SearchQuery" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -86,6 +164,12 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentSongUrl">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentSongUrl" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsSearchMode">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsSearchMode" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SearchQuery">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SearchQuery" generated properties.</summary>
         </member>
     </members>
 </doc>
