@@ -1,4 +1,4 @@
-<api type="debug" assembly-name="Taste" mvid="bb7e05590cdb4f0dabb6d752a9df46b0">
+<api type="debug" assembly-name="Taste" mvid="80747375e979412c917d169c04b301c4">
   <java-to-managed>
     <entry java-name="crc64faefbcec196edad9/MainActivity" managed-name="Taste.MainActivity, Taste" managed-type-token-id="33554444" />
     <entry java-name="crc64faefbcec196edad9/MainApplication" managed-name="Taste.MainApplication, Taste" managed-type-token-id="33554445" />

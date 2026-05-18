@@ -189,45 +189,84 @@ public partial class MainViewModel : BaseViewModel
         }
     }
 
-    /// <summary>
+
     /// פותח או סוגר את מסך החיפוש, ומאפס נתונים בעת סגירה
-    /// </summary>
     [RelayCommand]
-    private void ToggleSearch()
+private async Task ToggleSearchAsync()
+{
+    IsSearchMode = !IsSearchMode;
+    
+    if (!IsSearchMode)
     {
-        IsSearchMode = !IsSearchMode;
-        if (!IsSearchMode)
+        // המשתמש סגר את החיפוש וחזר למסך הבית - מאפסים נתונים
+        SearchResults.Clear();
+        SearchQuery = string.Empty;
+
+        // מחזירים את הנגן לנגן את השיר הראשון בפיד הראשי
+        if (PublicStories.Count > 0)
         {
-            SearchResults.Clear();
-            SearchQuery = string.Empty;
+            await PlaySongAsync(PublicStories[0]);
+        }
+        else
+        {
+            CurrentSongUrl = string.Empty; // אם אין פוסטים, פשוט משתיקים
         }
     }
+}
 
-    /// <summary>
-    /// פונה לספוטיפיי ומחפש שירים לפי מה שהמשתמש הקליד
-    /// </summary>
-    [RelayCommand]
-    private async Task PerformSearchAsync()
+
+// משתנה שיודע לבטל משימות רקע (כמו חיפוש קודם שעוד לא הסתיים)
+private CancellationTokenSource? _searchCts;
+
+
+
+/// מתודה פנימית של המערכת שמופעלת אוטומטית בכל פעם שהטקסט בתיבת החיפוש משתנה
+partial void OnSearchQueryChanged(string value)
+{
+    // 1. אם יש חיפוש קודם שעדיין רץ, נבטל אותו מיד כי המשתמש הקליד אות חדשה
+    _searchCts?.Cancel();
+    _searchCts = new CancellationTokenSource();
+    // 2. הפעלת הלוגיקה של החיפוש בזמן אמת עם הטוקן לביטול
+    _ = LiveSearchAsync(value, _searchCts.Token);
+}
+
+
+/// לוגיקת החיפוש החכמה בזמן אמת
+private async Task LiveSearchAsync(string query, CancellationToken token)
+{
+    if (string.IsNullOrWhiteSpace(query))
     {
-        if (string.IsNullOrWhiteSpace(SearchQuery)) return;
+        MainThread.BeginInvokeOnMainThread(() => SearchResults.Clear());
+        return;
+    }
 
-        try
+    try
+    {
+        // קודם כל עוברים לרוץ ברקע ומחכים חצי שנייה (כדי לא לתקוע את ה-UI בזמן הקלדה)
+        await Task.Delay(500, token).ConfigureAwait(false);
+
+        System.Diagnostics.Debug.WriteLine($"Live searching Spotify for: {query}");
+        
+        // שינוי ל-limit קטן יותר (5) וביצוע הקריאה לחלוטין ברקע
+        var tracks = await _spotifyService.SearchTracksAsync(query, limit: 5).ConfigureAwait(false);
+
+        if (token.IsCancellationRequested) return;
+
+        // רק כשחוזרים לעדכן את ה-UI בפועל, קופצים חזרה ל-MainThread
+        MainThread.BeginInvokeOnMainThread(() =>
         {
-            System.Diagnostics.Debug.WriteLine($"Searching Spotify for: {SearchQuery}");
-            var tracks = await _spotifyService.SearchTracksAsync(SearchQuery, limit: 15);
-            
             SearchResults.Clear();
             foreach (var track in tracks)
             {
                 string imageUrl = track.Album?.Images?.FirstOrDefault()?.Url ?? "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?w=800";
-                
+
                 SearchResults.Add(new SongPost
                 {
                     UserId = track.Id ?? "",
                     TrackName = track.Name ?? "",
                     ArtistName = string.Join(", ", track.Artists.Select(a => a.Name ?? "")),
                     AlbumImageUrl = imageUrl,
-                    UserUploadedImageUrl = imageUrl, // זמני לתצוגה מקדימה
+                    UserUploadedImageUrl = imageUrl,
                     PreviewUrl = string.IsNullOrEmpty(track.PreviewUrl) ? "NONE" : track.PreviewUrl,
                     UserProfileImageUrl = "https://randomuser.me/api/portraits/men/1.jpg",
                     UserUsername = track.Artists.FirstOrDefault()?.Name ?? "Spotify User",
@@ -238,30 +277,34 @@ public partial class MainViewModel : BaseViewModel
                     SpotifyArtistIds = string.Join(",", track.Artists.Select(a => a.Id ?? ""))
                 });
             }
-            System.Diagnostics.Debug.WriteLine($"Found {SearchResults.Count} results for search.");
-        }
-        catch (Exception ex)
-        {
-            System.Diagnostics.Debug.WriteLine($"Search error: {ex.Message}");
-        }
+        });
     }
+    catch (TaskCanceledException)
+    {
+        // התעלמות, המשתמש פשוט המשיך להקליד אות נוספת
+    }
+    catch (Exception ex)
+    {
+        System.Diagnostics.Debug.WriteLine($"Live search error: {ex.Message}");
+    }
+}
 
-    /// <summary>
+
     /// פקודה שמופעלת בלחיצה על כפתור ה-➕ ברשימת החיפוש ומעבירה אותנו לשלב הבא
-    /// </summary>
     [RelayCommand]
     private async Task SelectTrackAsync(SongPost selectedPost)
     {
         if (selectedPost == null) return;
 
-        System.Diagnostics.Debug.WriteLine($"Selected track for posting: {selectedPost.TrackName}");
-        
-        // סגירת מצב החיפוש והחזרת המשתמש למסך הראשי
-        IsSearchMode = false;
-        
-        // קופץ פופ-אפ זמני, כאן בהמשך נחבר את המצלמה/גלריה
-        await Shell.Current.DisplayAlert("השלב הבא", $"בחרת את השיר '{selectedPost.TrackName}', עכשיו נצלם או נבחר תמונה לפוסט!", "מעולה");
-    }
+    System.Diagnostics.Debug.WriteLine($"Selected track for posting: {selectedPost.TrackName}");
+    
+    // עצירת השיר של החיפוש מיד עם הבחירה
+    CurrentSongUrl = string.Empty;
+    IsSearchMode = false;
+    
+    // קופץ פופ-אפ זמני, כאן בהמשך נחבר את המצלמה/גלריה
+    await Shell.Current.DisplayAlert("השלב הבא", $"בחרת את השיר '{selectedPost.TrackName}', עכשיו נצלם או נבחר תמונה לפוסט!", "מעולה");
+}
 
     /// <summary>
     /// פונקציית עזר פנימית שפונה ל-iTunes API כדי להשיג את קטע ה-30 שניות החסר

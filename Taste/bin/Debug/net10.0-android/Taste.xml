@@ -25,7 +25,6 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
-            <inheritdoc/>
         </member>
         <member name="M:Taste.ViewModels.MainViewModel.InitializeAsync">
             <summary>
@@ -47,20 +46,14 @@
             ה-Command שמקושר לנגן. מופעל בגלילה בפיד, או בלחיצה על כפתור ה-Play בחיפוש.
             </summary>
         </member>
-        <member name="M:Taste.ViewModels.MainViewModel.ToggleSearch">
-            <summary>
+        <member name="M:Taste.ViewModels.MainViewModel.ToggleSearchAsync">
             פותח או סוגר את מסך החיפוש, ומאפס נתונים בעת סגירה
-            </summary>
         </member>
-        <member name="M:Taste.ViewModels.MainViewModel.PerformSearchAsync">
-            <summary>
-            פונה לספוטיפיי ומחפש שירים לפי מה שהמשתמש הקליד
-            </summary>
+        <member name="M:Taste.ViewModels.MainViewModel.LiveSearchAsync(System.String,System.Threading.CancellationToken)">
+            לוגיקת החיפוש החכמה בזמן אמת
         </member>
         <member name="M:Taste.ViewModels.MainViewModel.SelectTrackAsync(Taste.Models.SongPost)">
-            <summary>
             פקודה שמופעלת בלחיצה על כפתור ה-➕ ברשימת החיפוש ומעבירה אותנו לשלב הבא
-            </summary>
         </member>
         <member name="M:Taste.ViewModels.MainViewModel.GetBackupPreviewUrlAsync(System.String,System.String)">
             <summary>
@@ -81,6 +74,9 @@
         <member name="P:Taste.ViewModels.MainViewModel.SearchQuery">
             <inheritdoc cref="F:Taste.ViewModels.MainViewModel._searchQuery"/>
         </member>
+        <member name="M:Taste.ViewModels.MainViewModel.OnSearchQueryChanged(System.String)">
+            מתודה פנימית של המערכת שמופעלת אוטומטית בכל פעם שהטקסט בתיבת החיפוש משתנה
+        </member>
         <member name="F:Taste.ViewModels.MainViewModel.playSongCommand">
             <summary>The backing field for <see cref="P:Taste.ViewModels.MainViewModel.PlaySongCommand"/>.</summary>
         </member>
@@ -91,13 +87,7 @@
             <summary>The backing field for <see cref="P:Taste.ViewModels.MainViewModel.ToggleSearchCommand"/>.</summary>
         </member>
         <member name="P:Taste.ViewModels.MainViewModel.ToggleSearchCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Taste.ViewModels.MainViewModel.ToggleSearch"/>.</summary>
-        </member>
-        <member name="F:Taste.ViewModels.MainViewModel.performSearchCommand">
-            <summary>The backing field for <see cref="P:Taste.ViewModels.MainViewModel.PerformSearchCommand"/>.</summary>
-        </member>
-        <member name="P:Taste.ViewModels.MainViewModel.PerformSearchCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Taste.ViewModels.MainViewModel.PerformSearchAsync"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Taste.ViewModels.MainViewModel.ToggleSearchAsync"/>.</summary>
         </member>
         <member name="F:Taste.ViewModels.MainViewModel.selectTrackCommand">
             <summary>The backing field for <see cref="P:Taste.ViewModels.MainViewModel.SelectTrackCommand"/>.</summary>
