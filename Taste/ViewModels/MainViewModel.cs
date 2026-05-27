@@ -43,9 +43,8 @@ public partial class MainViewModel : BaseViewModel
         });
     }
 
-    /// <summary>
+
     /// מנהל את כל שלבי האתחול של המסך: חיבור לספוטיפיי, טעינת שירים והפעלת השיר הראשון.
-    /// </summary>
     private async Task InitializeAsync()
     {
         try
@@ -83,19 +82,30 @@ public partial class MainViewModel : BaseViewModel
         }
     }
 
-    /// <summary>
     /// מחפש בספוטיפיי שירים פופולריים ומייצר מהם את רשימת הפוסטים (PublicStories)
-    /// </summary>
     private async Task LoadStoriesFromSpotifyAsync()
     {
         try
         {
             System.Diagnostics.Debug.WriteLine("Loading stories from Spotify...");
             
-            // רשימת השירים הפופולריים שיוצגו בפיד
-            var searchQueries = new[] { "Blinding Lights", "Levitating", "As It Was", "Heat Waves", "Shut Up and Dance" };
+            // רשימה גדולה של שירים שונים
+            var allSearchQueries = new[] 
+            { 
+                "Blinding Lights", "Levitating", "As It Was", "Heat Waves", "Shut Up and Dance",
+                "Bohemian Rhapsody", "Thriller", "Imagine", "Hotel California", "Stairway to Heaven",
+                "Yesterday", "Like a Virgin", "Smells Like Teen Spirit", "Wonderwall", "Shape of You",
+                "One Dance", "Sorry", "Look What You Made Me Do", "Anti-Hero", "Flowers",
+                "Good as Hell", "Levitate", "Peaches", "STAY", "Blinding Lights (Remix)",
+                "Toxic", "Umbrella", "Rolling in the Deep", "Someone Like You", "We Are Never Ever",
+                "All Too Well", "Kill Bill", "Cruel Summer", "Midnights", "Fortnight"
+            };
             
-            foreach (var query in searchQueries)
+            // שנשתמש בשאילתות אקראיות כל פעם שהאפליקציה נפתחת
+            var random = new Random();
+            var randomQueries = allSearchQueries.OrderBy(_ => random.Next()).Take(5).ToArray();
+            
+            foreach (var query in randomQueries)
             {
                 try
                 {
@@ -144,9 +154,8 @@ public partial class MainViewModel : BaseViewModel
         }
     }
 
-    /// <summary>
+
     /// מפעיל את המוזיקה של הפוסט הראשון כשהאפליקציה נפתחת
-    /// </summary>
     private async Task InitializeAudioAsync()
     {
         await Task.Delay(2500);
@@ -157,18 +166,30 @@ public partial class MainViewModel : BaseViewModel
         }
     }
 
-    /// <summary>
+
     /// ה-Command שמקושר לנגן. מופעל בגלילה בפיד, או בלחיצה על כפתור ה-Play בחיפוש.
-    /// </summary>
     [RelayCommand]
     private async Task PlaySongAsync(SongPost story)
     {
         if (story == null) return;
 
+        // עצור את כל השירים האחרים בפיד
+        foreach (var post in PublicStories)
+        {
+            if (post != story)
+                post.IsPlaying = false;
+        }
+        foreach (var post in SearchResults)
+        {
+            if (post != story)
+                post.IsPlaying = false;
+        }
+
         // 1. במידה ולספוטיפיי יש קטע שמע תקין, נשתמש בו מיד
         if (!string.IsNullOrEmpty(story.PreviewUrl) && story.PreviewUrl != "NONE")
         {
             CurrentSongUrl = story.PreviewUrl;
+            story.IsPlaying = true; // סמן שהשיר מתנגן
             System.Diagnostics.Debug.WriteLine($"Playing Spotify preview: {CurrentSongUrl}");
             return;
         }
@@ -176,45 +197,81 @@ public partial class MainViewModel : BaseViewModel
         // 2. במידה וחסר ("NONE"), נפנה שקופית ל-API החופשי של Apple Music
         System.Diagnostics.Debug.WriteLine($"Spotify preview missing for '{story.TrackName}'. Fetching from Apple Music...");
         
-        string backupUrl = await GetBackupPreviewUrlAsync(story.TrackName, story.ArtistName);
+        string? backupUrl = await GetBackupPreviewUrlAsync(story.TrackName, story.ArtistName);
         
         if (!string.IsNullOrEmpty(backupUrl))
         {
             CurrentSongUrl = backupUrl;
+            story.IsPlaying = true; // סמן שהשיר מתנגן
             System.Diagnostics.Debug.WriteLine($"Playing Apple Music backup preview: {CurrentSongUrl}");
         }
         else
         {
+            story.IsPlaying = false;
             System.Diagnostics.Debug.WriteLine("[Taste] Fallback failed. No audio available for this track.");
         }
     }
 
-
-    /// פותח או סוגר את מסך החיפוש, ומאפס נתונים בעת סגירה
     [RelayCommand]
-private async Task ToggleSearchAsync()
-{
-    IsSearchMode = !IsSearchMode;
-    
-    if (!IsSearchMode)
+    private async Task OpenInSpotifyAsync(SongPost story)
     {
-        // המשתמש סגר את החיפוש וחזר למסך הבית - מאפסים נתונים
-        SearchResults.Clear();
-        SearchQuery = string.Empty;
+        if (story == null) return;
+        // ה-URI שפותח את השיר הספציפי בתוך אפליקציית ספוטיפיי
+        string spotifyUri = $"spotify:track:{story.SpotifyTrackId}";
 
-        // מחזירים את הנגן לנגן את השיר הראשון בפיד הראשי
-        if (PublicStories.Count > 0)
+        if (await Launcher.Default.CanOpenAsync(spotifyUri))
         {
-            await PlaySongAsync(PublicStories[0]);
+            await Launcher.Default.OpenAsync(spotifyUri);
         }
         else
         {
-            CurrentSongUrl = string.Empty; // אם אין פוסטים, פשוט משתיקים
+            // אם האפליקציה לא מותקנת, נפתח את השיר בדפדפן
+            await Browser.Default.OpenAsync($"https://open.spotify.com/track/{story.SpotifyTrackId}");
         }
     }
-}
+
+    [RelayCommand]
+    private async Task LikeOrAddTrackAsync(SongPost story)
+    {
+        if (story == null) return;
+
+        // כאן אתה יכול להוסיף לוגיקה של UI (כמו שינוי צבע הלב)
+        await Shell.Current.DisplayAlertAsync("ספוטיפיי", $"השיר {story.TrackName} הועבר לטיפול בספוטיפיי!", "אישור");
+
+        // פתיחת ספוטיפיי לביצוע הפעולה (כרגע פותח את השיר, 
+        // בהמשך עם API תוכל לבצע Like ישירות)
+        await OpenInSpotifyAsync(story);
+    }
 
 
+/// פותח או סוגר את מסך החיפוש, ומאפס נתונים בעת סגירה
+    [RelayCommand]
+    private async Task ToggleSearchAsync()
+    {
+        IsSearchMode = !IsSearchMode;
+        
+        if (!IsSearchMode)
+        {
+            // המשתמש סגר את החיפוש וחזר למסך הבית - מאפסים נתונים
+            SearchResults.Clear();
+            SearchQuery = string.Empty;
+
+            // מחזירים את הנגן לנגן את השיר הראשון בפיד הראשי
+            if (PublicStories.Count > 0)
+            {
+                await PlaySongAsync(PublicStories[0]);
+            }
+            else
+            {
+                CurrentSongUrl = string.Empty; // אם אין פוסטים, פשוט משתיקים
+            }
+        }
+        else
+        {
+            // המשתמש פתח את מסך החיפוש - עצור את המוזיקה
+            CurrentSongUrl = string.Empty;
+        }
+    }
 // משתנה שיודע לבטל משימות רקע (כמו חיפוש קודם שעוד לא הסתיים)
 private CancellationTokenSource? _searchCts;
 
@@ -303,7 +360,7 @@ private async Task LiveSearchAsync(string query, CancellationToken token)
     IsSearchMode = false;
     
     // קופץ פופ-אפ זמני, כאן בהמשך נחבר את המצלמה/גלריה
-    await Shell.Current.DisplayAlert("השלב הבא", $"בחרת את השיר '{selectedPost.TrackName}', עכשיו נצלם או נבחר תמונה לפוסט!", "מעולה");
+    await Shell.Current.DisplayAlertAsync("השלב הבא", $"בחרת את השיר '{selectedPost.TrackName}', עכשיו נצלם או נבחר תמונה לפוסט!", "מעולה");
 }
 
     /// <summary>
@@ -340,14 +397,76 @@ private async Task LiveSearchAsync(string query, CancellationToken token)
     }
 
     [RelayCommand]
-    private void LikeStory(SongPost story)
+    private async Task LikeStoryAsync(SongPost story)
     {
-        // לוגיקה עתידית לעליית לייקים
+        if (story == null) return;
+        
+        try
+        {
+            // Prevent rapid repeated clicks
+            if (story.IsLiked)
+                return;
+            
+            // עדכון ממשק משתמש מיד
+            story.IsLiked = true;
+            
+            // שליחה לספוטיפיי
+            bool success = await _spotifyService.LikeTrackAsync(story.SpotifyTrackId);
+            
+            if (!success)
+            {
+                // אם נכשל, חזור למצב הקודם
+                story.IsLiked = false;
+                System.Diagnostics.Debug.WriteLine("Failed to like track on Spotify");
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine($"Song '{story.TrackName}' liked on Spotify!");
+            }
+        }
+        catch (Exception ex)
+        {
+            story.IsLiked = false;
+            System.Diagnostics.Debug.WriteLine($"Error liking story: {ex.Message}");
+        }
     }
 
-    /// <summary>
+    [RelayCommand]
+    private async Task AddToPlaylistAsync(SongPost story)
+    {
+        if (story == null) return;
+        
+        try
+        {
+            // Prevent rapid repeated clicks
+            if (story.IsAddedToPlaylist)
+                return;
+            
+            // עדכון ממשק משתמש מיד
+            story.IsAddedToPlaylist = true;
+            
+            // שליחה לספוטיפיי
+            bool success = await _spotifyService.AddTrackToPlaylistAsync(story.SpotifyTrackId);
+            
+            if (!success)
+            {
+                // אם נכשל, חזור למצב הקודם
+                story.IsAddedToPlaylist = false;
+                System.Diagnostics.Debug.WriteLine("Failed to add track to playlist on Spotify");
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine($"Song '{story.TrackName}' added to playlist on Spotify!");
+            }
+        }
+        catch (Exception ex)
+        {
+            story.IsAddedToPlaylist = false;
+            System.Diagnostics.Debug.WriteLine($"Error adding to playlist: {ex.Message}");
+        }
+    }
+
     /// רשימת גיבוי עם נתונים פיקטיביים למקרה שאין אינטרנט או שהחיבור לספוטיפיי נכשל
-    /// </summary>
     private void LoadStoriesDummy()
     {
         PublicStories.Add(new SongPost 

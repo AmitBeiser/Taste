@@ -7,8 +7,30 @@
         <member name="T:Taste.Models.SongPost">
             <inheritdoc/>
         </member>
+        <member name="P:Taste.Models.SongPost.IsLiked">
+            <inheritdoc cref="F:Taste.Models.SongPost._isLiked"/>
+        </member>
+        <member name="P:Taste.Models.SongPost.IsAddedToPlaylist">
+            <inheritdoc cref="F:Taste.Models.SongPost._isAddedToPlaylist"/>
+        </member>
         <member name="P:Taste.Models.SongPost.IsLocked">
             <inheritdoc cref="F:Taste.Models.SongPost._isLocked"/>
+        </member>
+        <member name="P:Taste.Models.SongPost.IsPlaying">
+            <inheritdoc cref="F:Taste.Models.SongPost._isPlaying"/>
+        </member>
+        <member name="M:Taste.Services.SpotifyService.LoginAndAuthenticateUserAsync">
+            מנהל את תהליך ההתחברות האישי של המשתמש דרך ה-WebAuthenticator של MAUI
+        </member>
+        <member name="M:Taste.Services.SpotifyService.ExchangeCodeForAccessTokenAsync(System.String)">
+            מחליף את ה-authorization code בתוך access token דרך ה-backend
+        </member>
+        <member name="M:Taste.Services.SpotifyService.LikeTrackAsync(System.String)">
+            שולח בקשת API רשמית לשמירת השיר ב-Liked Songs של המשתמש
+        </member>
+        <member name="M:Taste.Services.SpotifyService.AddTrackToPlaylistAsync(System.String)">
+            מוסיף שיר לפלייליסט ייעודי של האפליקציה בחשבון של המשתמש. 
+            אם הפלייליסט לא קיים, הוא מייצר אותו אוטומטית!
         </member>
         <member name="T:Taste.ViewModels.BaseViewModel">
             <inheritdoc/>
@@ -25,26 +47,21 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="M:Taste.ViewModels.MainViewModel.InitializeAsync">
-            <summary>
             מנהל את כל שלבי האתחול של המסך: חיבור לספוטיפיי, טעינת שירים והפעלת השיר הראשון.
-            </summary>
         </member>
         <member name="M:Taste.ViewModels.MainViewModel.LoadStoriesFromSpotifyAsync">
-            <summary>
             מחפש בספוטיפיי שירים פופולריים ומייצר מהם את רשימת הפוסטים (PublicStories)
-            </summary>
         </member>
         <member name="M:Taste.ViewModels.MainViewModel.InitializeAudioAsync">
-            <summary>
             מפעיל את המוזיקה של הפוסט הראשון כשהאפליקציה נפתחת
-            </summary>
         </member>
         <member name="M:Taste.ViewModels.MainViewModel.PlaySongAsync(Taste.Models.SongPost)">
-            <summary>
             ה-Command שמקושר לנגן. מופעל בגלילה בפיד, או בלחיצה על כפתור ה-Play בחיפוש.
-            </summary>
         </member>
         <member name="M:Taste.ViewModels.MainViewModel.ToggleSearchAsync">
             פותח או סוגר את מסך החיפוש, ומאפס נתונים בעת סגירה
@@ -61,9 +78,7 @@
             </summary>
         </member>
         <member name="M:Taste.ViewModels.MainViewModel.LoadStoriesDummy">
-            <summary>
             רשימת גיבוי עם נתונים פיקטיביים למקרה שאין אינטרנט או שהחיבור לספוטיפיי נכשל
-            </summary>
         </member>
         <member name="P:Taste.ViewModels.MainViewModel.CurrentSongUrl">
             <inheritdoc cref="F:Taste.ViewModels.MainViewModel._currentSongUrl"/>
@@ -83,6 +98,18 @@
         <member name="P:Taste.ViewModels.MainViewModel.PlaySongCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Taste.ViewModels.MainViewModel.PlaySongAsync(Taste.Models.SongPost)"/>.</summary>
         </member>
+        <member name="F:Taste.ViewModels.MainViewModel.openInSpotifyCommand">
+            <summary>The backing field for <see cref="P:Taste.ViewModels.MainViewModel.OpenInSpotifyCommand"/>.</summary>
+        </member>
+        <member name="P:Taste.ViewModels.MainViewModel.OpenInSpotifyCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Taste.ViewModels.MainViewModel.OpenInSpotifyAsync(Taste.Models.SongPost)"/>.</summary>
+        </member>
+        <member name="F:Taste.ViewModels.MainViewModel.likeOrAddTrackCommand">
+            <summary>The backing field for <see cref="P:Taste.ViewModels.MainViewModel.LikeOrAddTrackCommand"/>.</summary>
+        </member>
+        <member name="P:Taste.ViewModels.MainViewModel.LikeOrAddTrackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Taste.ViewModels.MainViewModel.LikeOrAddTrackAsync(Taste.Models.SongPost)"/>.</summary>
+        </member>
         <member name="F:Taste.ViewModels.MainViewModel.toggleSearchCommand">
             <summary>The backing field for <see cref="P:Taste.ViewModels.MainViewModel.ToggleSearchCommand"/>.</summary>
         </member>
@@ -99,7 +126,13 @@
             <summary>The backing field for <see cref="P:Taste.ViewModels.MainViewModel.LikeStoryCommand"/>.</summary>
         </member>
         <member name="P:Taste.ViewModels.MainViewModel.LikeStoryCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:Taste.ViewModels.MainViewModel.LikeStory(Taste.Models.SongPost)"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Taste.ViewModels.MainViewModel.LikeStoryAsync(Taste.Models.SongPost)"/>.</summary>
+        </member>
+        <member name="F:Taste.ViewModels.MainViewModel.addToPlaylistCommand">
+            <summary>The backing field for <see cref="P:Taste.ViewModels.MainViewModel.AddToPlaylistCommand"/>.</summary>
+        </member>
+        <member name="P:Taste.ViewModels.MainViewModel.AddToPlaylistCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Taste.ViewModels.MainViewModel.AddToPlaylistAsync(Taste.Models.SongPost)"/>.</summary>
         </member>
         <member name="T:Taste.Resource">
             <summary>
@@ -113,8 +146,17 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLiked">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLiked" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsAddedToPlaylist">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsAddedToPlaylist" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLocked">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLocked" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsPlaying">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsPlaying" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
@@ -140,8 +182,17 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLiked">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLiked" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsAddedToPlaylist">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsAddedToPlaylist" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLocked">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLocked" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsPlaying">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsPlaying" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Taste.ViewModels"
              xmlns:viewmodels="clr-namespace:Taste.ViewModels"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="Taste.MainPage"
@@ -14,33 +15,33 @@
                               ShouldAutoPlay="True"
                               IsVisible="False" />
 
-
-
-
         <Grid Grid.Row="0" ColumnDefinitions="*, Auto" Padding="20, 15, 20, 10">
             <Label Text="Taste" 
-                   FontSize="28" 
-                   FontFamily="Poppins"
+                   FontSize="28"
                    FontAttributes="Bold" 
                    TextColor="black" 
                    VerticalOptions="Center" />
-            
-
-
 
             <HorizontalStackLayout Grid.Column="1" Spacing="20" VerticalOptions="Center">
-                <Label Text="🔍" FontSize="20" TextColor="Black">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding ToggleSearchCommand}" />
-                    </Label.GestureRecognizers>
-                </Label>
-                <Label Text="➕" FontSize="20" TextColor="Black" />
-                <Label Text="🔔" FontSize="20" TextColor="Black" />
+                <ImageButton Source="search_icon.png" 
+                             BackgroundColor="Transparent" 
+                             HeightRequest="18" 
+                             WidthRequest="18" 
+                             Padding="2"
+                             InputTransparent="False"
+                             Command="{Binding ToggleSearchCommand}" />
+                <ImageButton Source="create_icon.png" 
+                             BackgroundColor="Transparent" 
+                             HeightRequest="18" 
+                             WidthRequest="18" 
+                             Padding="2"/>
+                <ImageButton Source="notification_icon.png" 
+                             BackgroundColor="Transparent" 
+                             HeightRequest="18" 
+                             WidthRequest="18" 
+                             Padding="2"/>
             </HorizontalStackLayout>
         </Grid>
-
-
-
 
         <CarouselView x:Name="SongCarouselView"
                       Grid.Row="1" 
@@ -68,7 +69,14 @@
                                 <Label Text="{Binding PostTimeText}" FontSize="13" TextColor="#999999" />
                             </HorizontalStackLayout>
 
-                            <Label Grid.Column="2" Text="⋯" FontSize="20" TextColor="#666666" VerticalOptions="Center" Padding="0, 0, 10, 0"/>
+                            <ImageButton Grid.Column="2" 
+                                         Source="more_icon.png" 
+                                         BackgroundColor="Transparent" 
+                                         HeightRequest="16" 
+                                         WidthRequest="16" 
+                                         Padding="2"
+                                         VerticalOptions="Center" 
+                                         Margin="0, 0, 10, 0"/>
                         </Grid>
 
                         <Border Grid.Row="1" Margin="15, 5, 15, 15" StrokeShape="RoundRectangle 10" StrokeThickness="1" Stroke="#E0E0E0" BackgroundColor="White">
@@ -84,32 +92,79 @@
 
                                 <Grid Grid.Row="1" ColumnDefinitions="*, Auto" Padding="0, 15, 0, 0" ColumnSpacing="10">
                                     <VerticalStackLayout VerticalOptions="Center">
-                                        <Label Text="{Binding TrackName}" FontSize="18" FontAttributes="Bold" TextColor="Black" />
-                                        <Label Text="{Binding ArtistName}" FontSize="14" TextColor="#666666" />
+                                        <Label Text="{Binding TrackName}" FontSize="18" FontAttributes="Bold" TextColor="Black">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainViewModel}}, Path=OpenInSpotifyCommand}"
+                                                                       CommandParameter="{Binding .}" />
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                        <Label Text="{Binding ArtistName}" FontSize="14" TextColor="#666666">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainViewModel}}, Path=OpenArtistInSpotifyCommand}"
+                                                                       CommandParameter="{Binding .}" />
+                                            </Label.GestureRecognizers>
+                                        </Label>
                                     </VerticalStackLayout>
                                     
                                     <HorizontalStackLayout Grid.Column="1" Spacing="15" VerticalOptions="Center">
-                                        <Label Text="❤️" FontSize="18" TextColor="#F44336" VerticalOptions="Center" />
-                                        <Label Text="➕" FontSize="18" TextColor="#666666" VerticalOptions="Center" />
+                                        <ImageButton BackgroundColor="Transparent"
+                                                     HeightRequest="18"
+                                                     WidthRequest="18"
+                                                     Padding="2"
+                                                     Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainViewModel}}, Path=LikeStoryCommand}"
+                                                     CommandParameter="{Binding .}">
+                                            <ImageButton.Source>
+                                                <FileImageSource File="heart_empty.png" />
+                                            </ImageButton.Source>
+                                            <ImageButton.Triggers>
+                                                <DataTrigger TargetType="ImageButton" Binding="{Binding IsLiked}" Value="True">
+                                                    <Setter Property="Source" Value="heart_red.png" />
+                                                </DataTrigger>
+                                            </ImageButton.Triggers>
+                                        </ImageButton>
+
+                                        <ImageButton BackgroundColor="Transparent"
+                                                     HeightRequest="18"
+                                                     WidthRequest="18"
+                                                     Padding="2"
+                                                     Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainViewModel}}, Path=AddToPlaylistCommand}"
+                                                     CommandParameter="{Binding .}">
+                                            <ImageButton.Source>
+                                                <FileImageSource File="add_icon.png" />
+                                            </ImageButton.Source>
+                                            <ImageButton.Triggers>
+                                                <DataTrigger TargetType="ImageButton" Binding="{Binding IsAddedToPlaylist}" Value="True">
+                                                    <Setter Property="Source" Value="v_icon.png" />
+                                                </DataTrigger>
+                                            </ImageButton.Triggers>
+                                        </ImageButton>
                                     </HorizontalStackLayout>
                                 </Grid>
                             </Grid>
                         </Border>
 
-
-
-
-
-                        
-
-                        <Grid Grid.Row="2" ColumnDefinitions="*, Auto" Padding="15, 0, 15, 10">
+                        <Grid Grid.Row="2" Padding="15, 0, 15, 10">
                             <HorizontalStackLayout Spacing="20">
-                                <Label Text="🔥" FontSize="26" TextColor="Black" VerticalOptions="Center" />
-                                <Label Text="💬" FontSize="26" TextColor="Black" VerticalOptions="Center" />
-                                <Label Text="🔗" FontSize="26" TextColor="Black" VerticalOptions="Center" />
+                                <ImageButton BackgroundColor="Transparent" 
+                                             HeightRequest="20" 
+                                             WidthRequest="20" 
+                                             Padding="2"
+                                             VerticalOptions="Center"
+                                             Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainViewModel}}, Path=FireStoryCommand}"
+                                             CommandParameter="{Binding .}">
+                                    <ImageButton.Source>
+                                        <FileImageSource File="fire_icon.png" />
+                                    </ImageButton.Source>
+                                    <ImageButton.Triggers>
+                                        <DataTrigger TargetType="ImageButton" Binding="{Binding IsFired}" Value="True">
+                                            <Setter Property="Source" Value="fired_icon.png" />
+                                        </DataTrigger>
+                                    </ImageButton.Triggers>
+                                </ImageButton>
+
+                                <ImageButton Source="comment_icon.png" BackgroundColor="Transparent" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" Padding="2"/>
+                                <ImageButton Source="share_icon.png" BackgroundColor="Transparent" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" Padding="2"/>
                             </HorizontalStackLayout>
-                            
-                            <Label Grid.Column="1" Text="🔖" FontSize="26" TextColor="Black" VerticalOptions="Center" Padding="0, 0, 5, 0"/>
                         </Grid>
 
                         <Grid Grid.Row="3" ColumnDefinitions="Auto, *" Padding="15, 0, 15, 15">
@@ -127,18 +182,30 @@
               RowDefinitions="Auto, *">
             
             <VerticalStackLayout Padding="20, 10" Spacing="10">
-                <Grid ColumnDefinitions="*, Auto">
-                    <Border StrokeShape="RoundRectangle 20" StrokeThickness="1" Stroke="#E0E0E0" Padding="15,0">
-                        <Entry Placeholder="Search for a song..." 
-                               Text="{Binding SearchQuery}"
-                               ReturnType="Search"
-                               ReturnCommand="{Binding PerformSearchCommand}"
-                               TextColor="Black"
-                               PlaceholderColor="Gray" />
-                    </Border>
-                    <Button Grid.Column="1" Text="Cancel" Command="{Binding ToggleSearchCommand}" BackgroundColor="Transparent" TextColor="#1DB954" />
-                </Grid>
-            </VerticalStackLayout>
+    <Grid ColumnDefinitions="*, Auto" ColumnSpacing="10">
+        <Border Grid.Column="0" 
+                StrokeShape="RoundRectangle 20" 
+                StrokeThickness="1" 
+                Stroke="#E0E0E0" 
+                Padding="15,0"
+                VerticalOptions="Center">
+            <Entry Placeholder="Search for a song..." 
+                   Text="{Binding SearchQuery, Mode=TwoWay}"
+                   ReturnType="Search"
+                   ReturnCommand="{Binding PerformSearchCommand}"
+                   TextColor="Black"
+                   PlaceholderColor="Gray" />
+        </Border>
+
+        <ImageButton Grid.Column="1" 
+                     Source="cancel_icon.png" 
+                     Command="{Binding ToggleSearchCommand}" 
+                     BackgroundColor="Transparent" 
+                     HeightRequest="18" 
+                     WidthRequest="18" 
+                     VerticalOptions="Center" />
+    </Grid>
+</VerticalStackLayout>
 
             <CollectionView Grid.Row="1" ItemsSource="{Binding SearchResults}">
                 <CollectionView.ItemTemplate>
@@ -154,14 +221,30 @@
                             </VerticalStackLayout>
 
                             <HorizontalStackLayout Grid.Column="2" Spacing="10" VerticalOptions="Center">
-                                <Button Text="▶️" FontSize="12" HeightRequest="35" WidthRequest="35" 
-                                        CornerRadius="17" BackgroundColor="#F0F0F0"
-                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:MainViewModel}}, Path=PlaySongCommand}"
-                                        CommandParameter="{Binding .}" />
-                                <Button Text="➕" FontSize="12" HeightRequest="35" WidthRequest="35" 
-                                        CornerRadius="17" BackgroundColor="#1DB954" TextColor="White"
-                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:MainViewModel}}, Path=SelectTrackCommand}"
-                                        CommandParameter="{Binding .}" />
+                                <ImageButton BackgroundColor="#F0F0F0" 
+                                             HeightRequest="28" 
+                                             WidthRequest="28" 
+                                             CornerRadius="14"
+                                             Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:MainViewModel}}, Path=PlaySongCommand}"
+                                             CommandParameter="{Binding .}">
+                                    <ImageButton.Source>
+                                        <FileImageSource File="play_icon.png" />
+                                    </ImageButton.Source>
+                                    <ImageButton.Triggers>
+                                        <DataTrigger TargetType="ImageButton" Binding="{Binding IsPlaying}" Value="True">
+                                            <Setter Property="Source" Value="pause_icon.png" />
+                                        </DataTrigger>
+                                    </ImageButton.Triggers>
+                                </ImageButton>
+                                
+                                <ImageButton Source="add_icon.png" 
+                                             BackgroundColor="#1DB954" 
+                                             HeightRequest="28" 
+                                             WidthRequest="28" 
+                                             CornerRadius="14"
+                                             Padding="8"
+                                             Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:MainViewModel}}, Path=SelectTrackCommand}"
+                                             CommandParameter="{Binding .}" />
                             </HorizontalStackLayout>
                         </Grid>
                     </DataTemplate>

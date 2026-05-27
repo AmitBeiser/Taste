@@ -14,10 +14,14 @@ public partial class SongPost : ObservableObject
     public string UserUsername { get; set; } = "";
     public string PostCaption { get; set; } = "";
     public string PostTimeText { get; set; } = "";
-
-    // זה השדה שמשתנה כשהחבר מחזיר שיר
+    [ObservableProperty]
+    private bool _isLiked = false;
+    [ObservableProperty]
+    private bool _isAddedToPlaylist;
     [ObservableProperty]
     private bool _isLocked = true;
+    [ObservableProperty]
+    private bool _isPlaying = false;
 
     // כאן אפשר להוסיף את הניקוד של ה-Trendsetter שדיברנו עליו
     public int PopularityScore { get; set; }
